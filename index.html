@@ -5,34 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cyberhunt - Professional website">
     <meta name="generator" content="Website Generator">
-    <meta name="theme-color" content="hsl(38, 88%, 40%)">
+    <meta name="theme-color" content="hsl(232, 61%, 40%)">
     <title>Cyberhunt</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body{font-family:'Poppins', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
-        h1,h2,h3,h4,h5,h6{font-family:'Poppins', sans-serif}
+        body{font-family:'Manrope', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+        h1,h2,h3,h4,h5,h6{font-family:'Manrope', sans-serif}
         section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
         header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
-        [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
+        [data-animate]{opacity:0;transform:translateY(20px);transition:opacity .7s ease-out,transform .7s ease-out}[data-animate].visible{opacity:1;transform:translateY(0)}[data-animate="stagger"]>*{opacity:0;transform:translateY(15px);transition:opacity .5s,transform .5s;transition-delay:calc(var(--child-index,0)*.1s)}[data-animate="stagger"].visible>*{opacity:1;transform:translateY(0)}
         .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 1px 3px rgba(0,0,0,.1);transition:all .3s ease;width:100%}
         ::-webkit-scrollbar{width:8px;height:8px}
         ::-webkit-scrollbar-track{background:#f1f1f1}
-        ::-webkit-scrollbar-thumb{background:hsl(38, 88%, 40%);border-radius:4px}
-        ::-webkit-scrollbar-thumb:hover{background:hsl(38, 88%, 30%)}
-        body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(38, 88%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+        ::-webkit-scrollbar-thumb{background:hsl(232, 61%, 40%);border-radius:4px}
+        ::-webkit-scrollbar-thumb:hover{background:hsl(232, 61%, 30%)}
+        body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(232, 61%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
         @media print{[data-animate]{opacity:1;transform:none}}
     </style>
     
     <script>
-        tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(38, 88%, 95%)","100":"hsl(38, 88%, 90%)","200":"hsl(38, 88%, 80%)","300":"hsl(38, 88%, 70%)","400":"hsl(38, 88%, 60%)","500":"hsl(38, 88%, 50%)","600":"hsl(38, 88%, 40%)","700":"hsl(38, 88%, 30%)","800":"hsl(38, 88%, 20%)","900":"hsl(38, 88%, 10%)"}},fontFamily:{sans:[''Poppins'','system-ui','sans-serif'],heading:[''Poppins'','sans-serif']}}}}
+        tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(232, 61%, 95%)","100":"hsl(232, 61%, 90%)","200":"hsl(232, 61%, 80%)","300":"hsl(232, 61%, 70%)","400":"hsl(232, 61%, 60%)","500":"hsl(232, 61%, 50%)","600":"hsl(232, 61%, 40%)","700":"hsl(232, 61%, 30%)","800":"hsl(232, 61%, 20%)","900":"hsl(232, 61%, 10%)"}},fontFamily:{sans:[''Manrope'','system-ui','sans-serif'],heading:[''Manrope'','sans-serif']}}}}
     </script>
 </head>
 <body class="antialiased text-gray-800">
@@ -42,375 +42,574 @@
 
 
 <!-- HEADER SECTION -->
-<header class="relative bg-gray-100 overflow-hidden">
-    <div class="absolute inset-0">
-        <img src="/images/g94414c65cc569c837b683c9f06b502cc80131ab96794efa46f38857a280f42d3383a263b9c91e7be0b7cd4cf2b3b4586253" alt="Tractor in field" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-r from-brown-800 to-green-600 opacity-60"></div>
-    </div>
-
-    <nav class="relative px-6 py-4">
-        <div class="container mx-auto flex items-center justify-between">
-            <div class="flex items-center">
-                <a class="text-2xl font-bold text-white hover:text-green-200" href="#">
-                    Cyberhunt
-                </a>
-            </div>
-            <div class="hidden md:flex items-center space-x-6">
-                <a class="text-lg text-white hover:text-green-200" href="#">Products</a>
-                <a class="text-lg text-white hover:text-green-200" href="#">Services</a>
-                <a class="text-lg text-white hover:text-green-200" href="#">About Us</a>
-                <a class="text-lg text-white hover:text-green-200" href="#">Contact</a>
-            </div>
-            <button class="md:hidden text-white focus:outline-none">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <div class="relative container mx-auto px-6 py-32 md:py-48 lg:py-64 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4" data-animate="fade-in-up">
-            Revolutionizing Agriculture with Smart Equipment
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-200 mb-8" data-animate="fade-in-up" data-animate-delay="200">
-            Empowering farmers with cutting-edge technology for increased efficiency and sustainable practices.
-        </p>
-        <div class="flex justify-center" data-animate="fade-in-up" data-animate-delay="400">
-            <a href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl mr-4">
-                Explore Our Products
-            </a>
-            <a href="#" class="bg-transparent border border-white hover:border-green-200 text-white font-bold py-3 px-6 rounded-xl">
-                Learn More
-            </a>
-        </div>
-    </div>
-</header>
-
-<!-- ABOUT SECTION -->
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberhunt - Agriculture Equipment</title>
+  <title>Cyberhunt - Blockchain Technology</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Custom styles (optional) */
-    .text-shadow {
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Custom Styles for Animations */
+    [data-animate] {
+      opacity: 0;
+      transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
     }
-    .bg-gradient-custom {
-      background: linear-gradient(135deg, #a38258 0%, #705636 100%);
+
+    [data-animate="slide-left"] {
+      transform: translateX(50px);
     }
-    .accent-border {
-      border-color: #94b34d; /* Green accent */
+
+    [data-animate="slide-right"] {
+      transform: translateX(-50px);
+    }
+
+    [data-animate].animate {
+      opacity: 1;
+      transform: translateX(0);
     }
   </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-900 text-white font-sans">
 
-  <!-- Header -->
-  <header class="bg-gradient-custom text-white py-6 md:py-8 lg:py-10">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between">
-        <a href="#" class="text-2xl md:text-3xl lg:text-4xl font-bold text-shadow">
-          Cyberhunt
-        </a>
-
-        <nav class="hidden md:flex space-x-6 lg:space-x-8">
-          <a href="#" class="hover:text-gray-200">Home</a>
-          <a href="#" class="hover:text-gray-200">About</a>
-          <a href="#" class="hover:text-gray-200">Products</a>
-          <a href="#" class="hover:text-gray-200">Services</a>
-          <a href="#" class="hover:text-gray-200">Contact</a>
-        </nav>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+  <!-- Header Section -->
+  <header class="relative overflow-hidden" style="background-image: url('https://pixabay.com/get/g7fb2a3e35c633a9708d9c3f621038a7895661d1a7617c8bf8eba3417c619e3ebcf23d75d46fa4ca7b42bcaaa0ac1ce9ccfe2dbbc1892258a82d3ab8d25c4b5c5_640.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-900 to-green-700 opacity-75"></div>
+    <nav class="relative z-10 py-6">
+      <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between">
+          <div class="text-xl font-semibold text-white">
+            <a href="#" class="text-green-400 hover:text-green-200">Cyberhunt</a>
+          </div>
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-green-200">About</a>
+            <a href="#" class="hover:text-green-200">Services</a>
+            <a href="#" class="hover:text-green-200">Solutions</a>
+            <a href="#" class="hover:text-green-200">Contact</a>
+          </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-green-200">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+      <!-- Mobile Menu (Hidden by default) -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-4 py-2 space-y-2">
+          <a href="#" class="block hover:text-green-200">About</a>
+          <a href="#" class="block hover:text-green-200">Services</a>
+          <a href="#" class="block hover:text-green-200">Solutions</a>
+          <a href="#" class="block hover:text-green-200">Contact</a>
+        </div>
+      </div>
+    </nav>
 
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gradient-custom py-4">
-      <div class="container mx-auto px-4">
-        <a href="#" class="block py-2 hover:text-gray-200">Home</a>
-        <a href="#" class="block py-2 hover:text-gray-200">About</a>
-        <a href="#" class="block py-2 hover:text-gray-200">Products</a>
-        <a href="#" class="block py-2 hover:text-gray-200">Services</a>
-        <a href="#" class="block py-2 hover:text-gray-200">Contact</a>
+    <div class="relative z-10 container mx-auto px-6 py-20 md:py-32 lg:py-40">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="text-center md:text-left" data-animate="slide-right">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Secure Your Future with Blockchain Innovation
+          </h1>
+          <p class="text-lg text-gray-300 mb-8">
+            Cyberhunt provides cutting-edge blockchain solutions for businesses seeking enhanced security, transparency, and efficiency. Explore our innovative services and discover how we can transform your operations.
+          </p>
+          <a href="#" class="inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
+            Get Started
+          </a>
+        </div>
+        <div class="hidden md:block" data-animate="slide-left">
+          <img src="https://pixabay.com/get/g05e1678e5c1a8b434962fc8a057631029eafabe07af34eac3b1d051cb6f537f67a427d67a52659b615fe85e666ab58e7f7e864baac8619329919adbe17e2a8a3_640.jpg" alt="Blockchain Illustration" class="rounded-xl shadow-lg">
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden" data-animate="fade-in">
-    <img src="/images/g94414c65cc569c837b683c9f906b502cc80131ab96794efa46f38857a280f42d3383a263b9c91e7be0b7cd4cf2b3b458625" alt="Tractor in Field" class="absolute inset-0 w-full h-full object-cover object-center">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative z-10 text-center text-white">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-shadow mb-4">
-        Empowering Agriculture with Innovation
-      </h1>
-      <p class="text-lg md:text-xl lg:text-2xl text-shadow">
-        Your trusted partner for advanced agricultural equipment.
-      </p>
-      <a href="#" class="inline-block mt-8 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition duration-300">
-        Explore Our Products
-      </a>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section class="py-16 bg-white" data-animate="fade-in">
-    <div class="container mx-auto px-4">
+  <!-- About Section -->
+  <section class="py-16 bg-gray-800" id="about">
+    <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img src="/images/g970edb73f24e226c6091b77ea14190efb526ee0a8cd7114e373407d000a23ab4bd101d599c2350711b4970812d6c9a593bf" alt="Modern Farm Equipment" class="rounded-xl shadow-lg">
+        <div data-animate="slide-right">
+          <img src="https://pixabay.com/get/g10fda8c7a4aa7cc0385e05d52160ffb313f8586b8d9ce16b3db24f25c7606ed33f8240acf08bdf63089dc227539329eb87f5488f789dfe51993b86596ffab851_640.jpg" alt="About Cyberhunt" class="rounded-xl shadow-lg">
         </div>
-        <div>
-          <h2 class="text-3xl font-bold text-gray-800 mb-4">About Cyberhunt</h2>
-          <p class="text-gray-700 leading-relaxed mb-6">
-            At Cyberhunt, we're passionate about revolutionizing the agriculture industry with cutting-edge equipment and innovative solutions.  Founded in 2010, we've dedicated ourselves to providing farmers with the tools they need to maximize efficiency, increase yields, and cultivate a sustainable future. We are committed to delivering high-quality, reliable machinery that stands the test of time.
+        <div data-animate="slide-left">
+          <h2 class="text-3xl font-bold text-white mb-4">About Cyberhunt</h2>
+          <p class="text-lg text-gray-300 mb-6">
+            Cyberhunt is a leading provider of blockchain solutions, specializing in secure and transparent technologies for businesses of all sizes. Our mission is to empower organizations with the tools they need to thrive in the digital age. We offer a range of services, including blockchain development, smart contract auditing, and decentralized application (DApp) development.
           </p>
-          <p class="text-gray-700 leading-relaxed mb-6">
-            Our team of expert engineers and agricultural specialists work tirelessly to develop and refine our product line, ensuring that it meets the evolving needs of modern farming. We understand the challenges you face, and we're here to help you overcome them with equipment designed for performance and durability.
+          <p class="text-lg text-gray-300">
+            Our team of experienced blockchain engineers and consultants is dedicated to delivering innovative solutions that meet the unique needs of our clients. We are committed to providing exceptional service and support, ensuring that our clients achieve their goals and maximize the value of their blockchain investments.
           </p>
-          <ul class="list-disc pl-5 text-gray-700">
-            <li><strong>Innovation:</strong> We constantly seek new and better ways to improve agricultural practices.</li>
-            <li><strong>Quality:</strong> We never compromise on the quality of our equipment.</li>
-            <li><strong>Sustainability:</strong> We are committed to environmentally responsible farming practices.</li>
-            <li><strong>Customer Focus:</strong> Your success is our priority.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section class="py-16 bg-gray-100" data-animate="fade-in">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Featured Products</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Product Card 1 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="/images/gf7c4b0c65cb871a7e22136a4f6c86ad6ef177e4f2cbe2c6fbae5c0374f23bd878c1a49dba8cbc1edb1ccaee3fe419fb2_64" alt="Tractor" class="w-full h-48 object-cover object-center">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">AgriMax 9000 Tractor</h3>
-            <p class="text-gray-600">Powerful and versatile tractor for all your farming needs.</p>
-            <a href="#" class="inline-block mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition duration-300">
-              Learn More
-            </a>
-          </div>
-        </div>
-
-        <!-- Product Card 2 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="/images/gf299f6c5499f0c5a361240b9329d57eb8698309133898ddaa34569c1fd7177554bb702b513d5c6387a7f49fb8333b525320" alt="Harvester" class="w-full h-48 object-cover object-center">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">HarvestMaster Pro</h3>
-            <p class="text-gray-600">Efficient and reliable harvester for maximizing your crop yield.</p>
-            <a href="#" class="inline-block mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition duration-300">
-              Learn More
-            </a>
-          </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="/api/placeholder/640/480" alt="Precision Seeder" class="w-full h-48 object-cover object-center">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Precision Seeder 2000</h3>
-            <p class="text-gray-600">Advanced seeder for precise planting and optimal growth.</p>
-            <a href="#" class="inline-block mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition duration-300">
-              Learn More
-            </a>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="py-16 bg-white" data-animate="fade-in">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Comprehensive Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Service Card 1 -->
-        <div class="bg-gray-50 rounded-lg shadow-md p-6">
-          <i class="fas fa-wrench text-3xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Equipment Maintenance</h3>
-          <p class="text-gray-600">Regular maintenance and repair services to keep your equipment running smoothly.</p>
+  <section class="py-16 bg-gray-900" id="services">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-white text-center mb-8" data-animate="slide-down">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-xl p-6 shadow-md" data-animate="slide-up">
+          <i class="fas fa-lock text-3xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Blockchain Security</h3>
+          <p class="text-gray-300">
+            Protect your data and assets with our advanced blockchain security solutions. We offer comprehensive security audits, vulnerability assessments, and custom security protocols.
+          </p>
         </div>
-
-        <!-- Service Card 2 -->
-        <div class="bg-gray-50 rounded-lg shadow-md p-6">
-          <i class="fas fa-tools text-3xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Repair and Overhaul</h3>
-          <p class="text-gray-600">Expert repair and overhaul services for all types of agricultural equipment.</p>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-md" data-animate="slide-up">
+          <i class="fas fa-file-contract text-3xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Contract Development</h3>
+          <p class="text-gray-300">
+            Automate your business processes with our smart contract development services. We create secure, efficient, and reliable smart contracts tailored to your specific needs.
+          </p>
         </div>
-
-        <!-- Service Card 3 -->
-        <div class="bg-gray-50 rounded-lg shadow-md p-6">
-          <i class="fas fa-handshake text-3xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Consultation & Support</h3>
-          <p class="text-gray-600">Professional consultation and support to help you choose the right equipment and optimize your operations.</p>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-md" data-animate="slide-up">
+          <i class="fas fa-code text-3xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">DApp Development</h3>
+          <p class="text-gray-300">
+            Build innovative decentralized applications (DApps) with our expert development team. We provide end-to-end DApp development services, from concept to deployment.
+          </p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-md" data-animate="slide-up">
+          <i class="fas fa-coins text-3xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Cryptocurrency Solutions</h3>
+          <p class="text-gray-300">
+            Navigate the world of cryptocurrencies with our comprehensive solutions. We offer cryptocurrency wallet development, exchange integration, and custom cryptocurrency development services.
+          </p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-md" data-animate="slide-up">
+          <i class="fas fa-chart-line text-3xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Blockchain Consulting</h3>
+          <p class="text-gray-300">
+            Get expert guidance on blockchain implementation with our consulting services. We provide strategic advice, technical expertise, and customized solutions to help you achieve your goals.
+          </p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 shadow-md" data-animate="slide-up">
+          <i class="fas fa-network-wired text-3xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Blockchain Integration</h3>
+          <p class="text-gray-300">
+            Seamlessly integrate blockchain technology into your existing systems. We offer integration services for various platforms, ensuring smooth and efficient operations.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Us Section -->
-  <section class="py-16 bg-gray-100" data-animate="fade-in">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Contact Us</h2>
+  <!-- Solutions Section -->
+  <section class="py-16 bg-gray-800" id="solutions">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-white text-center mb-8" data-animate="slide-down">Our Solutions</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Contact Form -->
-        <div>
-          <form>
-            <div class="mb-4">
-              <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-              <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
-            </div>
-            <div class="mb-4">
-              <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-              <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
-            </div>
-            <div class="mb-6">
-              <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-              <textarea id="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Send Message
-            </button>
-          </form>
+        <div class="bg-gray-900 rounded-xl p-6 shadow-md" data-animate="slide-right">
+          <h3 class="text-xl font-semibold text-white mb-2">Supply Chain Management</h3>
+          <p class="text-gray-300 mb-4">
+            Enhance transparency and traceability in your supply chain with our blockchain-based solutions. Track products from origin to delivery, ensuring authenticity and reducing fraud.
+          </p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Real-time tracking</li>
+            <li>Improved transparency</li>
+            <li>Reduced costs</li>
+            <li>Enhanced security</li>
+          </ul>
         </div>
-
-        <!-- Contact Information -->
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Our Location</h3>
-          <p class="text-gray-700">123 Main Street, Anytown, USA</p>
-          <p class="text-gray-700">Phone: (555) 123-4567</p>
-          <p class="text-gray-700">Email: info@cyberhuntagri.com</p>
-          <div class="mt-6">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
+        <div class="bg-gray-900 rounded-xl p-6 shadow-md" data-animate="slide-left">
+          <h3 class="text-xl font-semibold text-white mb-2">Healthcare Data Management</h3>
+          <p class="text-gray-300 mb-4">
+            Securely manage patient data with our blockchain-based healthcare solutions. Ensure privacy, compliance, and interoperability across healthcare providers.
+          </p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Secure data storage</li>
+            <li>Improved data sharing</li>
+            <li>Enhanced privacy</li>
+            <li>Regulatory compliance</li>
+          </ul>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-6 shadow-md" data-animate="slide-right">
+          <h3 class="text-xl font-semibold text-white mb-2">Financial Services</h3>
+          <p class="text-gray-300 mb-4">
+            Transform your financial services with our blockchain solutions. Streamline transactions, reduce fraud, and improve efficiency.
+          </p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Faster transactions</li>
+            <li>Reduced fraud</li>
+            <li>Improved transparency</li>
+            <li>Lower costs</li>
+          </ul>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-6 shadow-md" data-animate="slide-left">
+          <h3 class="text-xl font-semibold text-white mb-2">Digital Identity Management</h3>
+          <p class="text-gray-300 mb-4">
+            Securely manage digital identities with our blockchain-based solutions. Empower users with control over their personal data and reduce the risk of identity theft.
+          </p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Secure identity verification</li>
+            <li>User-controlled data</li>
+            <li>Reduced fraud</li>
+            <li>Improved privacy</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gradient-custom text-white py-8">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 lg:grid
+  <!-- Contact Section -->
+  <section class="py-16 bg-gray-900" id="contact">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-white text-center mb-8" data-animate="slide-down">Contact Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div data-animate="slide-right">
+          <p class="text-lg text-gray-300 mb-6">
+            Have questions or want to learn more about our blockchain solutions? Contact us today to schedule a consultation.
+          </p>
+          <ul class="text-gray-300">
+            <li class="mb-2"><i class="fas fa-map-marker-alt text-green-500 mr-2"></i> 123 Main Street, Anytown, CA 12345</li>
+            <li class="mb-2"><i class="fas fa-phone text-green-500 mr-2"></i> (123) 456-7890</li>
+            <li class="mb-2"><i class="fas fa-envelope text-green-500 mr-2"></i> info@cyberhunt.com</li>
+          </ul>
+        </div>
+        <div data-animate="slide-left">
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
+              <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 text-white" placeholder="Your Name">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
+              <input type="email" id
+
+<!-- ABOUT SECTION -->
+```html
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-green-900 to-green-700 py-6 md:py-8 lg:py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+                    Cyberhunt
+                </a>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="/" class="hover:text-green-300 transition duration-300">Home</a>
+                    <a href="/about" class="hover:text-green-300 transition duration-300">About</a>
+                    <a href="/services" class="hover:text-green-300 transition duration-300">Services</a>
+                    <a href="/solutions" class="hover:text-green-300 transition duration-300">Solutions</a>
+                    <a href="/contact" class="hover:text-green-300 transition duration-300">Contact</a>
+                </nav>
+                <button class="md:hidden text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-16 md:py-24 lg:py-32 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="md:order-2" data-animate="fade-right">
+                    <img src="https://pixabay.com/get/g05e1678e5c1a8b434962fc8a057631029eafabe07af34eac3b1d051cb6f537f67a427d67a52659b615fe85e666ab58e7f7e864baac8619329919adbe17e2a8a3_640.jpg"
+                        alt="About Cyberhunt" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:order-1" data-animate="fade-left">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-green-400">About Cyberhunt</h2>
+                    <p class="text-lg leading-relaxed mb-8 text-gray-300">
+                        At Cyberhunt, we are pioneers in blockchain technology, dedicated to revolutionizing the way
+                        businesses operate in the digital age. Our mission is to provide secure, transparent, and
+                        efficient solutions that empower organizations to thrive in the evolving landscape of Web3.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8 text-gray-300">
+                        Founded in 2023, Cyberhunt has quickly established itself as a trusted partner for companies
+                        seeking to leverage the power of blockchain. Our team comprises experienced developers,
+                        cryptographers, and business strategists who are passionate about building innovative solutions
+                        that address real-world challenges.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8 text-gray-300">
+                        We believe in the transformative potential of blockchain to create a more decentralized,
+                        equitable, and secure future. Our commitment to excellence, innovation, and client satisfaction
+                        drives us to deliver cutting-edge solutions that exceed expectations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-16 md:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center text-green-400"
+                data-animate="fade-down">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-700 mb-4">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 4.75 7.5 4.75a12.742 12.742 0 00-2.553 3.02c-2.836 3.43-2.105 8.167 1.529 10.976C9.077 21.056 12 22.495 12 21.5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-green-300">Innovation</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We embrace new ideas and technologies to continuously improve our solutions and stay ahead of
+                        the curve.
+                    </p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up" data-animate-delay="200">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-700 mb-4">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-green-300">Integrity</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We conduct our business with honesty, transparency, and ethical principles, building trust with
+                        our clients and partners.
+                    </p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up" data-animate-delay="400">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-700 mb-4">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 14v6m-3-3h6m-6 0a3 3 0 100-6 3 3 0 000 6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-green-300">Collaboration</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We foster a collaborative environment where teamwork and open communication drive us to achieve
+                        common goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="py-16 md:py-24 lg:py-32 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center text-green-400"
+                data-animate="fade-down">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-900 rounded-xl p-4 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up">
+                    <img src="/api/placeholder/300/300" alt="John Doe"
+                        class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-green-300">John Doe</h3>
+                    <p class="text-gray-300 text-center">CEO</p>
+                    <p class="text-gray-400 text-center mt-2">
+                        "Leading Cyberhunt with a vision for a decentralized future."
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up" data-animate-delay="200">
+                    <img src="/api/placeholder/300/300" alt="Jane Smith"
+                        class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-green-300">Jane Smith</h3>
+                    <p class="text-gray-300 text-center">CTO</p>
+                    <p class="text-gray-400 text-center mt-2">
+                        "Driving innovation and building secure blockchain solutions."
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up" data-animate-delay="400">
+                    <img src="/api/placeholder/300/300" alt="David Lee"
+                        class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-green-300">David Lee</h3>
+                    <p class="text-gray-300 text-center">Head of Marketing</p>
+                    <p class="text-gray-400 text-center mt-2">
+                        "Connecting Cyberhunt with the world and driving adoption."
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up" data-animate-delay="600">
+                    <img src="/api/placeholder/300/300" alt="Sarah Chen"
+                        class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-green-300">Sarah Chen</h3>
+                    <p class="text-gray-300 text-center">Lead Developer</p>
+                    <p class="text-gray-400 text-center mt-2">
+                        "Crafting robust and scalable blockchain applications."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center text-green-400"
+                data-animate="fade-down">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="/api/placeholder/50/50" alt="Client 1"
+                            class="rounded-full w-12 h-12 object-cover mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-300">Acme Corp</h4>
+                            <p class="text-gray-400">Industry Leader</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed italic">
+                        "Cyberhunt's blockchain solutions have transformed our supply chain, providing unparalleled
+                        transparency and efficiency. We highly recommend their services."
+                    </p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300"
+                    data-animate="fade-up" data-animate-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="/api/placeholder/50/50" alt="Client 2"
+                            class="rounded-full w-12 h-12 object-cover mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-300">Beta Technologies</h4>
+                            <p class="text-gray-400">Innovative Startup</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed italic">
+                        "Working with Cyberhunt has been a game-changer for our company. Their expertise in blockchain
+                        and their commitment to our success are truly remarkable."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 py-12 md:py-16 lg:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-green-300">Cyberhunt</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Pioneering blockchain solutions for a secure and transparent future.
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-green-300 transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.663 9.15 8.431 9.806v-7.299H6.924v-2.706h2.507v-1.927c0-2.216.666-3.485 3.593-3.485.981 0 1.951.138 2.216.165v2.451h-1.511c-1.048 0-1.264.807
 
 <!-- SERVICES SECTION -->
-<section id="services" class="bg-gray-50 py-16 overflow-hidden">
+<section id="services" class="bg-gray-900 text-white py-20 overflow-hidden">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12" data-animate="fade-in">
-            <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-800 mb-4">Our Comprehensive Services</h2>
-            <p class="text-gray-600 text-lg">Cyberhunt provides a wide range of services to keep your agricultural equipment running smoothly and efficiently.</p>
+        <div class="text-center mb-16" data-animate="fade-in">
+            <h2 class="text-4xl font-extrabold text-green-400 mb-4">Our Blockchain Solutions</h2>
+            <p class="text-lg text-gray-300">Empowering businesses with innovative and secure blockchain technology.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="slide-in-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Service Card 1 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="/images/g94414c65cc569c837b683c9f06b502cc80131ab96794efa46f38857a280f42d3383a263b9c91e7be0b7cd4cf2b3b4586253" alt="Equipment Maintenance" class="w-full h-48 object-cover">
+            <!-- Service 1 -->
+            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-animate="slide-in-left">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Preventative Maintenance</h3>
-                    <p class="text-gray-600">Extend the life of your equipment with our comprehensive preventative maintenance programs. We handle everything from oil changes to filter replacements.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Regular Inspections</li>
-                        <li>Fluid Analysis</li>
-                        <li>Component Lubrication</li>
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.5 4.5L21.75 6M2.25 6l18 12M3 2.25h1.5m13.5 0h1.5m-15 0l2.25 2.25M21 2.25l-2.25 2.25M3 19.5h1.5m13.5 0h1.5m-15 0l2.25-2.25M21 19.5l-2.25-2.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Decentralized Application (DApp) Development</h3>
+                    <p class="text-gray-400">We build secure and scalable DApps tailored to your specific business needs, leveraging the power of blockchain technology.</p>
+                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
+                        <li>Smart Contract Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Blockchain Integration</li>
+                        <li>Testing and Auditing</li>
                     </ul>
                     <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
                 </div>
             </div>
 
-            <!-- Service Card 2 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="/images/g970edb73f24e226c6091b77ea14190efb526ee0a8cd7114e373407d000a23ab4bd101d599c2350711b4970812d6c9a593bf" alt="Equipment Repair" class="w-full h-48 object-cover">
+            <!-- Service 2 -->
+            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-animate="slide-in-up">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">On-Site Repair Services</h3>
-                    <p class="text-gray-600">Minimize downtime with our mobile repair services. Our experienced technicians come to you, equipped to handle a wide range of repairs.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Hydraulic Repairs</li>
-                        <li>Engine Diagnostics</li>
-                        <li>Welding & Fabrication</li>
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a3 3 0 00-3-3H7.5a3 3 0 00-3 3v10.5a3 3 0 003 3h8.25a3 3 0 003-3v-3.75m-9.375.75h1.5m-1.5 1.5h1.5m-1.5 3h1.5m-3-6h.375m-3 6h.375m-3-6h.375m-3 6h.375" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Smart Contract Auditing & Security</h3>
+                    <p class="text-gray-400">Ensure the integrity and security of your smart contracts with our comprehensive auditing services.</p>
+                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
+                        <li>Vulnerability Assessment</li>
+                        <li>Code Review</li>
+                        <li>Gas Optimization</li>
+                        <li>Formal Verification</li>
                     </ul>
                     <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
                 </div>
             </div>
 
-            <!-- Service Card 3 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="/images/gf7c4b0c65cb871a7e22136a4f6c86ad6ef177e4f2cbe2c6fbae5c0374f23bd878c1a49dba8cbc1edb1ccaee3fe419fb2_64" alt="Parts & Supplies" class="w-full h-48 object-cover">
+            <!-- Service 3 -->
+            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-animate="slide-in-right">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Genuine Parts & Supplies</h3>
-                    <p class="text-gray-600">We stock a comprehensive inventory of genuine parts and supplies to keep your equipment running at peak performance. Fast shipping available.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>OEM Parts</li>
-                        <li>Aftermarket Options</li>
-                        <li>Filters, Fluids & Lubricants</li>
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-4.037m-7.328 2.73a11.07 11.07 0 000 3.294m1.311 1.018l-1.07-1.019a11.071 11.071 0 00-3.294 0c.159.403.405.76.78 1.082l1.07 1.019m-1.07-1.019c.548.919 1.164 1.71 1.846 2.372l1.07 1.019m-1.724-1.175l1.724 1.175M4.5 6.364l1.091-1.091M19.5 6.364l-1.091-1.091M4.5 17.636l1.091 1.091M19.5 17.636l-1.091 1.091" />
+                        </svg>
+
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Blockchain Consulting</h3>
+                    <p class="text-gray-400">Expert guidance on integrating blockchain solutions into your existing business infrastructure.</p>
+                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
+                        <li>Strategy Development</li>
+                        <li>Technology Selection</li>
+                        <li>Implementation Planning</li>
+                        <li>Training & Support</li>
                     </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Browse Parts</a>
+                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
                 </div>
             </div>
 
-            <!-- Service Card 4 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="/images/gf299f6c5499f0c5a361240b9329d57eb8698309133898ddaa34569c1fd7177554bb702b513d5c6387a7f49fb8333b525320" alt="Equipment Diagnostics" class="w-full h-48 object-cover">
+            <!-- Service 4 -->
+            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 md:col-span-2" data-animate="slide-in-left">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Advanced Diagnostics</h3>
-                    <p class="text-gray-600">Utilizing the latest diagnostic technology, we accurately identify and resolve complex equipment issues quickly and efficiently.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Computerized Diagnostics</li>
-                        <li>Fault Code Analysis</li>
-                        <li>Performance Testing</li>
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Custom Blockchain Development</h3>
+                    <p class="text-gray-400">Tailored blockchain solutions designed to meet your unique business requirements. From private blockchains to consortium networks, we've got you covered.</p>
+                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
+                        <li>Private Blockchain Development</li>
+                        <li>Consortium Blockchain Development</li>
+                        <li>Hybrid Blockchain Development</li>
+                        <li>Tokenization Services</li>
                     </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Schedule a Diagnostic</a>
+                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
                 </div>
             </div>
 
-             <!-- Service Card 5 -->
-             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="/api/placeholder/640/480" alt="Equipment Training" class="w-full h-48 object-cover">
+            <!-- Service 5 -->
+            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:col-span-1" data-animate="slide-in-right">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Equipment Training</h3>
-                    <p class="text-gray-600">Maximize your team's efficiency with our comprehensive equipment training programs. Learn best practices for operation and maintenance.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Operator Training</li>
-                        <li>Maintenance Training</li>
-                        <li>Safety Training</li>
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Blockchain Integration</h3>
+                    <p class="text-gray-400">Seamlessly integrate blockchain technology into your existing systems and workflows to improve efficiency and transparency.</p>
+                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
+                        <li>API Integration</li>
+                        <li>Legacy System Integration</li>
+                        <li>Data Migration</li>
+                        <li>Workflow Automation</li>
                     </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">View Training Schedule</a>
-                </div>
-            </div>
-
-             <!-- Service Card 6 -->
-             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img src="/api/placeholder/640/480" alt="Equipment Financing" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Equipment Financing</h3>
-                    <p class="text-gray-600">We offer flexible financing options to help you acquire the equipment you need to grow your business. Contact us to learn more.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Lease Options</li>
-                        <li>Purchase Financing</li>
-                        <li>Customized Plans</li>
-                    </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Explore Financing Options</a>
+                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
                 </div>
             </div>
 
@@ -419,508 +618,87 @@
 </section>
 
 <!-- FEATURES SECTION -->
-<section id="features" class="py-16 bg-gray-50">
+<section id="features" class="bg-green-900 py-16 text-white overflow-hidden">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12" data-animate="fade-in">
-            <h2 class="text-3xl font-extrabold text-green-700 sm:text-4xl">
-                Advanced Agriculture Equipment Features
-            </h2>
-            <p class="mt-4 text-lg text-gray-600">
-                Explore the innovative features that set our agriculture equipment apart.
-            </p>
+            <h2 class="text-4xl font-extrabold mb-4 text-green-400">Unlocking the Power of Blockchain</h2>
+            <p class="text-lg text-green-200">Cyberhunt empowers businesses and individuals with cutting-edge blockchain solutions. Explore our key features:</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="slide-in-bottom">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="slide-in-up">
             <!-- Feature 1 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
                 <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 1v-3m3 1v-5m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-400 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a3 3 0 00-3-3H7.5a3 3 0 00-3 3v10.5a3 3 0 003 3h8.25a3 3 0 003-3v-3.75m-9.375.75h1.5m-1.5 1.5h1.5m-1.5 1.5h1.5m6-1.5H18a3 3 0 003-3V6.75a3 3 0 00-3-3H9.75a3 3 0 00-3 3v10.5a3 3 0 003 3h2.25m-5.625-3h1.5m-1.5 1.5h1.5" />
                     </svg>
-                    <h3 class="text-xl font-semibold text-gray-800">Precision Planting Technology</h3>
+                    <h3 class="text-xl font-semibold text-green-300">Secure Transactions</h3>
                 </div>
-                <p class="text-gray-700">
-                    Our planters utilize advanced GPS and sensor technology to ensure precise seed placement, maximizing yield and minimizing waste. Real-time data analysis provides valuable insights for optimal planting strategies.
-                </p>
+                <p class="text-green-100">Leverage our secure blockchain infrastructure for tamper-proof and transparent transactions.  Eliminate fraud and build trust with every interaction.</p>
             </div>
 
             <!-- Feature 2 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
                 <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 4.75 7.5 4.75a12.742 12.742 0 00-2.5 0c-1.601.175-3.19.938-4.5 2.253M12 6.253v13m0-13C13.168 5.477 14.754 4.75 16.5 4.75a12.742 12.742 0 012.5 0c1.601.175 3.19.938 4.5 2.253"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-400 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.621 11.875 4.242 11.875h15.516c.621 0 1.242.629 1.242 1.25v2.25c0 .629-.621 1.25-1.242 1.25H4.242a1.25 1.25 0 01-1.242-1.25v-2.25zM3 5.625C3 5.004 3.621 4.375 4.242 4.375h15.516c.621 0 1.242.629 1.242 1.25v2.25c0 .629-.621 1.25-1.242 1.25H4.242a1.25 1.25 0 01-1.242-1.25v-2.25zM3 20.625C3 20.004 3.621 19.375 4.242 19.375h15.516c.621 0 1.242.629 1.242 1.25v2.25c0 .629-.621 1.25-1.242 1.25H4.242a1.25 1.25 0 01-1.242-1.25v-2.25z" />
                     </svg>
-                    <h3 class="text-xl font-semibold text-gray-800">Automated Irrigation Systems</h3>
+
+                    <h3 class="text-xl font-semibold text-green-300">Smart Contracts</h3>
                 </div>
-                <p class="text-gray-700">
-                    Our irrigation systems intelligently monitor soil moisture levels and weather conditions, delivering water only when and where it's needed. This reduces water consumption and promotes healthy crop growth.
-                </p>
+                <p class="text-green-100">Automate agreements and streamline processes with our customizable smart contract solutions.  Reduce costs and increase efficiency with self-executing contracts.</p>
             </div>
 
             <!-- Feature 3 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
                 <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-400 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <h3 class="text-xl font-semibold text-gray-800">Intelligent Harvesting Solutions</h3>
+                    <h3 class="text-xl font-semibold text-green-300">Decentralized Applications (dApps)</h3>
                 </div>
-                <p class="text-gray-700">
-                    Our harvesting equipment is designed to minimize crop damage and maximize efficiency. Integrated sensors and AI algorithms optimize harvesting routes and speed, reducing labor costs and increasing yield.
-                </p>
+                <p class="text-green-100">Build and deploy decentralized applications on our robust blockchain platform. Create innovative solutions for finance, supply chain, and more.</p>
             </div>
 
             <!-- Feature 4 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
                 <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-400 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                     </svg>
-                    <h3 class="text-xl font-semibold text-gray-800">Variable Rate Application</h3>
+                    <h3 class="text-xl font-semibold text-green-300">Supply Chain Management</h3>
                 </div>
-                <p class="text-gray-700">
-                    Our sprayers and spreaders utilize variable rate technology (VRT) to apply fertilizers and pesticides precisely where they are needed. This minimizes environmental impact and optimizes resource utilization.
-                </p>
+                <p class="text-green-100">Track and trace goods throughout your supply chain with our blockchain-based solution.  Improve transparency, reduce counterfeiting, and enhance efficiency.</p>
             </div>
 
             <!-- Feature 5 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
                 <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1.25-3m8-14H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2H9.75z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-400 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-4.037m-7.328 4.037a25.752 25.752 0 01-5.44-4.037m3.982 4.037a50.751 50.751 0 01-2.424-3.422m2.71.342v7.696a2.05 2.05 0 01-2.05 2.05H5.25a2.05 2.05 0 01-2.05-2.05V11.21a2.05 2.05 0 012.05-2.05h5.652a2.05 2.05 0 012.05 2.05v1.421" />
+                        <path d="M16 18a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
-                    <h3 class="text-xl font-semibold text-gray-800">Remote Monitoring and Control</h3>
+
+                    <h3 class="text-xl font-semibold text-green-300">Digital Identity</h3>
                 </div>
-                <p class="text-gray-700">
-                    Monitor and control your equipment from anywhere with our remote monitoring and control system. Access real-time data, adjust settings, and receive alerts directly on your smartphone or computer.
-                </p>
+                <p class="text-green-100">Empower users with secure and verifiable digital identities.  Streamline onboarding processes and enhance data privacy with blockchain-based identity management.</p>
             </div>
 
             <!-- Feature 6 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300">
                 <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-400 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
                     </svg>
-                    <h3 class="text-xl font-semibold text-gray-800">Predictive Maintenance</h3>
+
+                    <h3 class="text-xl font-semibold text-green-300">Tokenization</h3>
                 </div>
-                <p class="text-gray-700">
-                    Our equipment is equipped with sensors that monitor performance and predict potential maintenance issues. This allows you to proactively address problems before they lead to costly downtime.
-                </p>
+                <p class="text-green-100">Unlock new funding opportunities and fractionalize assets with our tokenization platform.  Create and manage digital tokens for your business or project.</p>
             </div>
         </div>
     </div>
 </section>
-
-<!-- TESTIMONIALS SECTION -->
-<section class="bg-beige py-16 overflow-hidden">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-green-800 mb-8 data-animate='{"effect":"fade-up", "duration": 800}'">
-      What Our Customers Say
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 data-animate='{"effect":"slide-up", "duration": 1000, "delay": 200}'">
-
-      <!-- Testimonial 1 -->
-      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between h-full">
-        <div>
-          <div class="text-gray-600 italic mb-4">
-            "Cyberhunt's precision planters have revolutionized our corn yield. The automated seed placement and depth control are unmatched. We saw a significant increase in efficiency and a reduction in seed waste. Highly recommend!"
-          </div>
-          <div class="flex items-center">
-            <img src="/api/placeholder/50/50" alt="John Miller" class="rounded-full w-10 h-10 mr-3">
-            <div>
-              <p class="font-semibold text-gray-800">John Miller</p>
-              <p class="text-sm text-gray-500">Corn Farmer, Iowa</p>
-            </div>
-          </div>
-        </div>
-        <div class="mt-4">
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-        </div>
-      </div>
-
-      <!-- Testimonial 2 -->
-      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between h-full">
-        <div>
-          <div class="text-gray-600 italic mb-4">
-            "We invested in Cyberhunt's automated irrigation system last season. The water savings were incredible, and our crops thrived even during the driest periods. The remote monitoring and control features are a game-changer."
-          </div>
-          <div class="flex items-center">
-            <img src="/api/placeholder/50/50" alt="Maria Rodriguez" class="rounded-full w-10 h-10 mr-3">
-            <div>
-              <p class="font-semibold text-gray-800">Maria Rodriguez</p>
-              <p class="text-sm text-gray-500">Orchard Owner, California</p>
-            </div>
-          </div>
-        </div>
-        <div class="mt-4">
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-        </div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between h-full">
-        <div>
-          <div class="text-gray-600 italic mb-4">
-            "Cyberhunt's drone-based crop monitoring service has been invaluable. The high-resolution imagery and data analytics have helped us identify problem areas early and optimize our fertilizer application. A smart investment for any farm."
-          </div>
-          <div class="flex items-center">
-            <img src="/api/placeholder/50/50" alt="David Lee" class="rounded-full w-10 h-10 mr-3">
-            <div>
-              <p class="font-semibold text-gray-800">David Lee</p>
-              <p class="text-sm text-gray-500">Vineyard Manager, Napa Valley</p>
-            </div>
-          </div>
-        </div>
-        <div class="mt-4">
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 1l2.939 4.955 6.572.955-4.756 4.635 1.123 6.545z" />
-          </svg>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberhunt - Agriculture Equipment</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Custom Styles for Consistent Look and Feel */
-    .primary-color { color: #543827; } /* Dark Brown */
-    .secondary-color { color: #A38267; } /* Beige */
-    .accent-color { color: #60A960; } /* Green */
-    .bg-primary { background-color: #543827; }
-    .bg-secondary { background-color: #A38267; }
-    .bg-accent { background-color: #60A960; }
-    .gradient-bg {
-      background: linear-gradient(135deg, #543827 0%, #A38267 100%);
-    }
-  </style>
-</head>
-<body class="font-sans antialiased text-gray-700">
-
-  <!-- Header Section -->
-  <header class="gradient-bg text-white py-6 md:py-8">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between">
-        <a href="#" class="text-2xl font-bold">
-          <span class="text-accent-color">Cyber</span>Hunt
-        </a>
-        <nav class="hidden md:flex space-x-6">
-          <a href="#" class="hover:text-gray-200">Home</a>
-          <a href="#" class="hover:text-gray-200">Equipment</a>
-          <a href="#" class="hover:text-gray-200">Services</a>
-          <a href="#" class="hover:text-gray-200">About Us</a>
-          <a href="#" class="hover:text-gray-200">Contact</a>
-        </nav>
-        <button class="md:hidden text-white focus:outline-none">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="relative bg-cover bg-center h-screen flex items-center" style="background-image: url(/images/g94414c65cc569c837b683c9f06b502cc80131ab96794efa46f38857a280f42d3383a263b9c91e7be0b7cd4cf2b3b4586253);">
-    <div class="absolute inset-0 bg-black opacity-40"></div>
-    <div class="container mx-auto px-4 text-center relative z-10">
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4" data-animate="fade-in-up">
-        Powering Modern Agriculture
-      </h1>
-      <p class="text-lg md:text-xl text-gray-200 mb-8" data-animate="fade-in-up" data-animate-delay="200">
-        Innovative equipment solutions for sustainable farming.
-      </p>
-      <a href="#" class="bg-accent-color text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300" data-animate="fade-in-up" data-animate-delay="400">
-        Explore Our Equipment
-      </a>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="md:order-2" data-animate="fade-in-right">
-          <img src="/images/g970edb73f24e226c6091b77ea14190efb526ee0a8cd7114e373407d000a23ab4bd101d599c2350711b4970812d6c9a593bf" alt="Tractor in Field" class="rounded-lg shadow-md">
-        </div>
-        <div class="md:order-1" data-animate="fade-in-left">
-          <h2 class="text-3xl font-bold primary-color mb-4">About CyberHunt</h2>
-          <p class="text-gray-700 mb-6">
-            CyberHunt is a leading provider of advanced agricultural equipment, dedicated to helping farmers improve efficiency, productivity, and sustainability. We offer a wide range of cutting-edge machinery, from tractors and harvesters to precision planting and irrigation systems.
-          </p>
-          <p class="text-gray-700 mb-6">
-            Our mission is to empower farmers with the tools and technology they need to thrive in a rapidly evolving agricultural landscape. We are committed to innovation, quality, and customer satisfaction.
-          </p>
-          <a href="#" class="bg-secondary-color text-white py-3 px-6 rounded-lg hover:bg-brown-600 transition duration-300">
-            Learn More About Us
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Equipment Section -->
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold primary-color text-center mb-8" data-animate="fade-in-down">Our Featured Equipment</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in-up">
-          <img src="/images/gf7c4b0c65cb871a7e22136a4f6c86ad6ef177e4f2cbe2c6fbae5c0374f23bd878c1a49dba8cbc1edb1ccaee3fe419fb2_64" alt="Harvester" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold primary-color mb-2">Advanced Harvester X900</h3>
-            <p class="text-gray-700 mb-4">
-              High-performance harvester with intelligent crop sensing and automated adjustments.
-            </p>
-            <a href="#" class="bg-accent-color text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
-              View Details
-            </a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in-up" data-animate-delay="200">
-          <img src="/images/gf299f6c5499f0c5a361240b9329d57eb8698309133898ddaa34569c1fd7177554bb702b513d5c6387a7f49fb8333b525320" alt="Tractor" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold primary-color mb-2">Tractor Series 7000</h3>
-            <p class="text-gray-700 mb-4">
-              Powerful and versatile tractor designed for a wide range of agricultural tasks.
-            </p>
-            <a href="#" class="bg-accent-color text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
-              View Details
-            </a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-animate="fade-in-up" data-animate-delay="400">
-          <img src="/api/placeholder/640/480" alt="Precision Planter" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold primary-color mb-2">Precision Planter P500</h3>
-            <p class="text-gray-700 mb-4">
-              Advanced planter with GPS guidance and variable rate seeding technology.
-            </p>
-            <a href="#" class="bg-accent-color text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
-              View Details
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div data-animate="fade-in-left">
-          <h2 class="text-3xl font-bold primary-color mb-4">Contact Us</h2>
-          <p class="text-gray-700 mb-6">
-            We'd love to hear from you! Please use the form below to send us a message, or contact us directly using the information provided.
-          </p>
-          <ul class="list-none">
-            <li class="mb-2">
-              <strong class="primary-color">Address:</strong> 123 Main Street, Anytown, USA
-            </li>
-            <li class="mb-2">
-              <strong class="primary-color">Phone:</strong> (555) 123-4567
-            </li>
-            <li class="mb-2">
-              <strong class="primary-color">Email:</strong> info@cyberhuntagri.com
-            </li>
-          </ul>
-        </div>
-        <div data-animate="fade-in-right">
-          <form class="bg-white shadow-md rounded-lg p-8">
-            <div class="mb-4">
-              <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-              <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
-            </div>
-            <div class="mb-4">
-              <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-              <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
-            </div>
-            <div class="mb-4">
-              <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-              <textarea id="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="bg-accent-color text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="bg-primary text-white py-8">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h4 class="text-xl font-bold mb-4">CyberHunt</h4>
-        <p class="text-gray-300">
-          Your trusted partner for advanced agricultural equipment solutions.
-        </p>
-      </div>
-      <div>
-        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-        <ul class="list-none">
-          <li><a href="#" class="text-gray-300 hover:text-white">Home</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white">Equipment</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white">Services</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-xl font-bold mb-4">Contact Information</h4>
-        <p class="text-gray-300">
-          123 Main Street, Anytown, USA<br>
-          Phone: (555) 123-4567<br>
-          Email: info@cyberhuntagri.com
-        </p>
-      </div>
-    </div>
-    <div class="text-center mt-6 text-gray-400">
-      &copy; 2024 CyberHunt. All rights reserved.
-    </div>
-  </footer>
-
-  <script>
-    // Basic animation script (replace with a more robust library for complex animations)
-    document.addEventListener('DOMContentLoaded', () => {
-      const elements = document.querySelectorAll('[data-animate]');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const element = entry.target;
-            const animation = element.dataset.animate;
-            const delay = element.dataset.animateDelay || '0';
-
-            element.style.animation = `${animation} 0.8s ease-out ${delay}ms forwards`;
-            observer.unobserve(element);
-          }
-        });
-      });
-
-      elements.forEach(element => {
-        element.style.opacity = '0'; // Hide initially
-        observer.observe(element);
-      });
-    });
-  </script>
-
-</body>
-</html>
-
-<!-- FOOTER SECTION -->
-<footer class="bg-gray-800 text-gray-200 py-12 mt-24" data-animate="fade-up">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        <!-- About Us -->
-        <div class="space-y-4">
-            <h3 class="text-lg font-semibold text-white">About Cyberhunt</h3>
-            <p>Cyberhunt is a leading provider of innovative agricultural equipment, dedicated to helping farmers increase efficiency and productivity. We offer a wide range of solutions tailored to meet the unique needs of modern agriculture.</p>
-            <div class="flex space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
-            </div>
-        </div>
-
-        <!-- Products -->
-        <div class="space-y-4">
-            <h3 class="text-lg font-semibold text-white">Products</h3>
-            <ul class="list-none space-y-2">
-                <li><a href="#" class="hover:text-green-400">Tractors</a></li>
-                <li><a href="#" class="hover:text-green-400">Harvesters</a></li>
-                <li><a href="#" class="hover:text-green-400">Sprayers</a></li>
-                <li><a href="#" class="hover:text-green-400">Planters</a></li>
-                <li><a href="#" class="hover:text-green-400">Tillage Equipment</a></li>
-            </ul>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="space-y-4">
-            <h3 class="text-lg font-semibold text-white">Quick Links</h3>
-            <ul class="list-none space-y-2">
-                <li><a href="#" class="hover:text-green-400">Our Company</a></li>
-                <li><a href="#" class="hover:text-green-400">Services</a></li>
-                <li><a href="#" class="hover:text-green-400">News & Events</a></li>
-                <li><a href="#" class="hover:text-green-400">Careers</a></li>
-                <li><a href="#" class="hover:text-green-400">FAQ</a></li>
-            </ul>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="space-y-4">
-            <h3 class="text-lg font-semibold text-white">Contact Us</h3>
-            <p>123 Main Street, Anytown, USA</p>
-            <p>Email: info@cyberhuntagri.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <div class="mt-4">
-                <h4 class="text-md font-semibold text-white">Subscribe to our Newsletter</h4>
-                <div class="flex">
-                    <input type="email" placeholder="Your Email" class="bg-gray-700 text-gray-300 rounded-l-md py-2 px-4 focus:outline-none">
-                    <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-r-md">Subscribe</button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Copyright -->
-    <div class="mt-12 text-center border-t border-gray-700 pt-8">
-        <p>&copy; 2023 Cyberhunt. All rights reserved.</p>
-    </div>
-</footer>
 
     </main>
     
