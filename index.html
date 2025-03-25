@@ -5,34 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cyberhunt - Professional website">
     <meta name="generator" content="Website Generator">
-    <meta name="theme-color" content="hsl(232, 61%, 40%)">
+    <meta name="theme-color" content="hsl(352, 85%, 40%)">
     <title>Cyberhunt</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href='https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap' rel='stylesheet'>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body{font-family:'Manrope', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
-        h1,h2,h3,h4,h5,h6{font-family:'Manrope', sans-serif}
+        body{font-family:'Lato', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+        h1,h2,h3,h4,h5,h6{font-family:'Montserrat', sans-serif}
         section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
         header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
-        [data-animate]{opacity:0;transform:translateY(20px);transition:opacity .7s ease-out,transform .7s ease-out}[data-animate].visible{opacity:1;transform:translateY(0)}[data-animate="stagger"]>*{opacity:0;transform:translateY(15px);transition:opacity .5s,transform .5s;transition-delay:calc(var(--child-index,0)*.1s)}[data-animate="stagger"].visible>*{opacity:1;transform:translateY(0)}
+        [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
         .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 1px 3px rgba(0,0,0,.1);transition:all .3s ease;width:100%}
         ::-webkit-scrollbar{width:8px;height:8px}
         ::-webkit-scrollbar-track{background:#f1f1f1}
-        ::-webkit-scrollbar-thumb{background:hsl(232, 61%, 40%);border-radius:4px}
-        ::-webkit-scrollbar-thumb:hover{background:hsl(232, 61%, 30%)}
-        body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(232, 61%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+        ::-webkit-scrollbar-thumb{background:hsl(352, 85%, 40%);border-radius:4px}
+        ::-webkit-scrollbar-thumb:hover{background:hsl(352, 85%, 30%)}
+        body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(352, 85%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
         @media print{[data-animate]{opacity:1;transform:none}}
     </style>
     
     <script>
-        tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(232, 61%, 95%)","100":"hsl(232, 61%, 90%)","200":"hsl(232, 61%, 80%)","300":"hsl(232, 61%, 70%)","400":"hsl(232, 61%, 60%)","500":"hsl(232, 61%, 50%)","600":"hsl(232, 61%, 40%)","700":"hsl(232, 61%, 30%)","800":"hsl(232, 61%, 20%)","900":"hsl(232, 61%, 10%)"}},fontFamily:{sans:[''Manrope'','system-ui','sans-serif'],heading:[''Manrope'','sans-serif']}}}}
+        tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(352, 85%, 95%)","100":"hsl(352, 85%, 90%)","200":"hsl(352, 85%, 80%)","300":"hsl(352, 85%, 70%)","400":"hsl(352, 85%, 60%)","500":"hsl(352, 85%, 50%)","600":"hsl(352, 85%, 40%)","700":"hsl(352, 85%, 30%)","800":"hsl(352, 85%, 20%)","900":"hsl(352, 85%, 10%)"}},fontFamily:{sans:[''Lato'','system-ui','sans-serif'],heading:[''Montserrat'','sans-serif']}}}}
     </script>
 </head>
 <body class="antialiased text-gray-800">
@@ -699,6 +699,290 @@
         </div>
     </div>
 </section>
+
+<!-- TESTIMONIALS SECTION -->
+```html
+<section id="testimonials" class="relative py-20 bg-green-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-25 bg-gradient-to-br from-green-400 to-green-700 mix-blend-multiply"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-5xl font-extrabold text-green-200 mb-4" data-animate="fade-down">
+                What Our Clients Say
+            </h2>
+            <p class="text-green-300 text-lg">
+                Don't just take our word for it. See how Cyberhunt has helped businesses like yours thrive in the blockchain space.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Testimonial 1 -->
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300" data-animate="fade-up">
+                <div class="flex items-center mb-4">
+                    <img src="/api/placeholder/60/60" alt="Ava Johnson" class="rounded-full w-12 h-12 mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-green-100">Ava Johnson</h4>
+                        <p class="text-green-300 text-sm">CEO, BlockTech Solutions</p>
+                    </div>
+                </div>
+                <p class="text-green-200">
+                    "Cyberhunt's blockchain solutions transformed our supply chain. Increased transparency and efficiency have led to significant cost savings. Their team is incredibly knowledgeable and supportive."
+                </p>
+                <div class="mt-4 flex items-center">
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-green-800 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300" data-animate="fade-up" data-animate-delay="100">
+                <div class="flex items-center mb-4">
+                    <img src="/api/placeholder/60/60" alt="David Lee" class="rounded-full w-12 h-12 mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-green-100">David Lee</h4>
+                        <p class="text-green-300 text-sm">CTO, SecureChain Inc.</p>
+                    </div>
+                </div>
+                <p class="text-green-200">
+                    "We needed a robust and secure blockchain solution for our data management. Cyberhunt delivered beyond our expectations. Their expertise in cryptography and distributed ledger technology is unmatched."
+                </p>
+                <div class="mt-4 flex items-center">
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.929c.3-.921 1.603-.921 1.903 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.83 2.755a1 1 0 00-.293.765l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.83-2.755a1 1 0 00-.765-.293H8.072a1 1 0 00-.765.293l-2.83 2.755c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.293-.765L.588 8.709c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 2
+
+<!-- CONTACT SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberhunt - Blockchain Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for consistent look and feel */
+        .gradient-bg {
+            background: linear-gradient(to right, #004d40, #008000); /* Dark green to green */
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Header (Consistent across all pages) -->
+    <header class="gradient-bg py-6 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white hover:text-green-300">Cyberhunt</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-green-300">Home</a>
+                    <a href="#" class="hover:text-green-300">Services</a>
+                    <a href="#" class="hover:text-green-300">About</a>
+                    <a href="#" class="hover:text-green-300">Contact</a>
+                </nav>
+                <button class="md:hidden text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-800" id="contact">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-green-400 mb-4" data-animate="fade-in">Contact Us</h2>
+                <p class="text-gray-300 text-lg" data-animate="fade-in" data-animation-delay="200">We'd love to hear from you. Get in touch with our team for inquiries, support, or partnership opportunities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="glassmorphism p-8 rounded-xl shadow-lg" data-animate="slide-in-left">
+                    <h3 class="text-2xl font-semibold text-green-300 mb-4">Send us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100" placeholder="John Doe">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100" placeholder="john.doe@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-200 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover-scale">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="glassmorphism p-8 rounded-xl shadow-lg" data-animate="slide-in-right">
+                    <h3 class="text-2xl font-semibold text-green-300 mb-4">Contact Information</h3>
+                    <div class="mb-4">
+                        <p class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i> 123 Blockchain Street, Tech City, CA 91234</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-300"><i class="fas fa-phone mr-2"></i> (555) 123-4567</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@cyberhunt.com</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-green-300 mb-2">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-green-300"><i class="fab fa-facebook fa-lg"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-green-300"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-green-300"><i class="fab fa-linkedin fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <h4 class="text-xl font-semibold text-green-300 mb-2">About Cyberhunt</h4>
+                <p class="text-gray-300">Cyberhunt is a leading provider of blockchain solutions, specializing in secure and transparent technologies for businesses of all sizes.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-green-300 mb-2">Quick Links</h4>
+                <ul class="text-gray-300">
+                    <li><a href="#" class="hover:text-green-300">Services</a></li>
+                    <li><a href="#" class="hover:text-green-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-green-300">Contact</a></li>
+                    <li><a href="#" class="hover:text-green-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-green-300 mb-2">Contact Us</h4>
+                <p class="text-gray-300">Email: info@cyberhunt.com</p>
+                <p class="text-gray-300">Phone: (555) 123-4567</p>
+                <p class="text-gray-300">Address: 123 Blockchain Street, Tech City, CA 91234</p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-gray-500">© 2024 Cyberhunt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome (for icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Basic animation trigger (you'd need a proper animation library for more complex animations)
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('[data-animate]');
+            animatedElements.forEach(element => {
+                const animationType = element.getAttribute('data-animate');
+                const animationDelay = element.getAttribute('data-animation-delay') || '0';
+
+                setTimeout(() => {
+                    element.classList.add('animate__animated', 'animate__' + animationType); // Requires Animate.css library
+                }, animationDelay);
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- FOOTER SECTION -->
+<footer class="bg-green-900 text-green-100 py-12 mt-24" data-animate="fade-up">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-green-300">Cyberhunt</h3>
+                <p class="text-green-200">
+                    Empowering the future with secure and transparent blockchain solutions. We are dedicated to innovation and excellence in the decentralized world.
+                </p>
+                <div class="flex mt-4 space-x-4">
+                    <a href="#" class="text-green-300 hover:text-green-500" aria-label="Facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="#" class="text-green-300 hover:text-green-500" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <a href="#" class="text-green-300 hover:text-green-500" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-green-300">Quick Links</h3>
+                <ul class="list-none pl-0">
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Services</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Solutions</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Contact</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-green-300">Our Services</h3>
+                <ul class="list-none pl-0">
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Blockchain Consulting</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Smart Contract Development</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Decentralized Applications (DApps)</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Blockchain Integration</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-green-200 hover:text-green-300">Security Audits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-green-300">Contact Us</h3>
+                <p class="text-green-200 mb-2">
+                    123 Blockchain Avenue, Suite 400
+                    Techville, CA 91234
+                </p>
+                <p class="text-green-200 mb-2">
+                    Email: <a href="mailto:info@cyberhunt.com" class="text-green-200 hover:text-green-300">info@cyberhunt.com</a>
+                </p>
+                <p class="text-green-200">
+                    Phone: (555) 123-4567
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-green-200 border-t border-green-700 pt-4">
+            &copy; 2024 Cyberhunt. All rights reserved.
+        </div>
+    </div>
+</footer>
 
     </main>
     
