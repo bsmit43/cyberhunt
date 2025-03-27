@@ -8,72 +8,53 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <style>
         
-        body{font-family:'Manrope', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
-        h1,h2,h3,h4,h5,h6{font-family:'Manrope', sans-serif}
-        section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
-        header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
-        [data-animate]{opacity:0;transform:translateY(20px);transition:opacity .7s ease-out,transform .7s ease-out}[data-animate].visible{opacity:1;transform:translateY(0)}[data-animate="stagger"]>*{opacity:0;transform:translateY(15px);transition:opacity .5s,transform .5s;transition-delay:calc(var(--child-index,0)*.1s)}[data-animate="stagger"].visible>*{opacity:1;transform:translateY(0)}
-        .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 1px 3px rgba(0,0,0,.1);transition:all .3s ease;width:100%}
-        ::-webkit-scrollbar{width:8px;height:8px}
-        ::-webkit-scrollbar-track{background:#f1f1f1}
-        ::-webkit-scrollbar-thumb{background:hsl(232, 61%, 40%);border-radius:4px}
-        ::-webkit-scrollbar-thumb:hover{background:hsl(232, 61%, 30%)}
-        body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(232, 61%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
-        @media print{[data-animate]{opacity:1;transform:none}}
+        #mobile-menu.hidden {
+            display: none;
+        }
     
-    /* Custom Styles for Animations */
-    [data-animate] {
-      opacity: 0;
-      transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
-    }
-
-    [data-animate="slide-left"] {
-      transform: translateX(50px);
-    }
-
-    [data-animate="slide-right"] {
-      transform: translateX(-50px);
-    }
-
-    [data-animate].animate {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  
       </style>
     </head>
     <body>
-      <nav class="relative z-10 py-6">
-      <div class="container mx-auto px-6">
-        <div class="flex items-center justify-between">
-          <div class="text-xl font-semibold text-white">
-            <a href="#" class="text-green-400 hover:text-green-200">Cyberhunt</a>
-          </div>
-          <div class="hidden md:flex space-x-6">
-            <a href="#" class="hover:text-green-200">About</a>
-            <a href="#" class="hover:text-green-200">Services</a>
-            <a href="#" class="hover:text-green-200">Solutions</a>
-            <a href="#" class="hover:text-green-200">Contact</a>
-          </div>
-          <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-green-200">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
+      <nav class="bg-black text-white sticky top-0 z-50" data-animate="fade-down">
+    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold tracking-tight">
+            <span class="text-primary">Cyber</span>Hunt
+        </a>
+
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="/" class="hover:text-gray-300 transition-colors duration-200">Home</a>
+            <a href="/services" class="hover:text-gray-300 transition-colors duration-200">Services</a>
+            <a href="/portfolio" class="hover:text-gray-300 transition-colors duration-200">Portfolio</a>
+            <a href="/about" class="hover:text-gray-300 transition-colors duration-200">About Us</a>
+            <a href="/contact" class="hover:text-gray-300 transition-colors duration-200">Contact</a>
         </div>
-      </div>
-      <!-- Mobile Menu (Hidden by default) -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-4 py-2 space-y-2">
-          <a href="#" class="block hover:text-green-200">About</a>
-          <a href="#" class="block hover:text-green-200">Services</a>
-          <a href="#" class="block hover:text-green-200">Solutions</a>
-          <a href="#" class="block hover:text-green-200">Contact</a>
+
+        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 py-4">
+        <div class="container mx-auto px-4 flex flex-col space-y-3">
+            <a href="/" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+            <a href="/services" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Services</a>
+            <a href="/portfolio" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Portfolio</a>
+            <a href="/about" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+            <a href="/contact" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Contact</a>
         </div>
-      </div>
-    </nav>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</nav>
       <header class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div class="container mx-auto px-4 py-12">
           <h1 class="text-3xl font-bold">Cyberhunt - Contact Cyberhunt</h1>
@@ -85,322 +66,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Cyberhunt - Blockchain Technology</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Contact Cyberhunt - Advertising</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99 WilkesoIE+ksE6a/kQjQc9vniKidzzPvg2vUh3N/6KT2O5Wi6erQGjU0ytFXK/t3RrQjvJdwpoeFuJJ5CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Custom styles for smooth scrolling and animations */
-        html {
-            scroll-behavior: smooth;
-        }
-        [data-animate] {
-            opacity: 0;
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-            transform: translateY(20px);
-        }
-        [data-animate].animate {
-            opacity: 1;
-            transform: translateY(0);
+        /* Custom Styles (override Tailwind if needed) */
+        .gradient-header {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-100 font-sans">
 
-    <!-- Header (Consistent across all pages) -->
-    <header class="bg-gradient-to-r from-green-900 to-green-700 py-6 md:py-8 lg:py-10" data-animate>
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl md:text-3xl lg:text-4xl font-bold text-white hover:text-green-200">
-                    Cyberhunt
-                </a>
-                <nav class="hidden md:flex space-x-4 lg:space-x-6">
-                    <a href="/" class="hover:text-green-200">Home</a>
-                    <a href="/services" class="hover:text-green-200">Services</a>
-                    <a href="/about" class="hover:text-green-200">About</a>
-                    <a href="/contact" class="hover:text-green-200">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white hover:text-green-200 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+    <!-- Header -->
+    <header class="relative py-12 md:py-24 text-white">
+        <div class="absolute inset-0">
+            <img src="/images/gad0bd8f704306afae8270e97285326d7dd7c4f9744f7d4b893549e6074a7b5f14b9828b5b637214e127348c53d10985e8c0fad66dbd4bf5701e2df68e69abc55_640-1.jpg" alt="Cyberhunt Header" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 gradient-header"></div>
+        </div>
+        <div class="container mx-auto relative z-10 px-4">
+            <nav class="flex items-center justify-between">
+                <a href="/" class="text-2xl font-bold">Cyberhunt</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:text-gray-300">Home</a>
+                    <a href="/services" class="hover:text-gray-300">Services</a>
+                    <a href="/portfolio" class="hover:text-gray-300">Portfolio</a>
+                    <a href="/about" class="hover:text-gray-300">About</a>
+                    <a href="/contact" class="hover:text-gray-300">Contact</a>
                 </div>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="/" class="block py-2 px-4 text-sm hover:bg-green-700 hover:text-white">Home</a>
-                <a href="/services" class="block py-2 px-4 text-sm hover:bg-green-700 hover:text-white">Services</a>
-                <a href="/about" class="block py-2 px-4 text-sm hover:bg-green-700 hover:text-white">About</a>
-                <a href="/contact" class="block py-2 px-4 text-sm hover:bg-green-700 hover:text-white">Contact</a>
+                <button class="md:hidden text-gray-100 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </nav>
+            <div class="text-center mt-12 md:mt-20">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-animate="fade-in">Contact Us</h1>
+                <p class="text-lg md:text-xl text-gray-200" data-animate="fade-in" data-animate-delay="0.2">Let's discuss your advertising needs.</p>
             </div>
         </div>
     </header>
 
     <!-- Contact Section -->
-    <section class="py-16 px-4 bg-gray-800" data-animate>
-        <div class="container mx-auto">
+    <section class="py-16">
+        <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Contact Form -->
-                <div class="bg-gray-700 rounded-lg shadow-lg p-6 md:p-8">
-                    <h2 class="text-2xl font-semibold mb-4 text-green-400">Get in Touch</h2>
-                    <form action="#" method="POST">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Get in Touch</h2>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
                         </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200">
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
                         </div>
-                        <div class="mb-4">
-                            <label for="subject" class="block text-gray-300 text-sm font-bold mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200">
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
                         </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"></textarea>
-                        </div>
-                        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <button type="submit" class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                             Send Message
                         </button>
                     </form>
                 </div>
-
-                <!-- Contact Information -->
-                <div class="bg-gray-700 rounded-lg shadow-lg p-6 md:p-8">
-                    <h2 class="text-2xl font-semibold mb-4 text-green-400">Contact Information</h2>
-                    <div class="mb-4">
-                        <h3 class="text-lg font-semibold text-gray-300">Address</h3>
-                        <p>123 Blockchain Avenue</p>
-                        <p>Silicon Valley, CA 94043</p>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Contact Information</h2>
+                    <p class="text-gray-600 mb-4">We're here to help! Contact us through the form or using the details below.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-700">Address</h3>
+                            <p class="text-gray-600">123 Cyber Lane, Suite 200, Innovation City, CA 91234</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700">Phone</h3>
+                            <p class="text-gray-600">Main: (555) 123-4567</p>
+                            <p class="text-gray-600">Support: (555) 987-6543</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700">Email</h3>
+                            <p class="text-gray-600">info@cyberhunt.com</p>
+                            <p class="text-gray-600">support@cyberhunt.com</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700">Business Hours</h3>
+                            <p class="text-gray-600">Monday - Friday: 9:00 AM to 5:00 PM</p>
+                            <p class="text-gray-600">Saturday: 10:00 AM to 2:00 PM</p>
+                            <p class="text-gray-600">Sunday: Closed</p>
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <h3 class="text-lg font-semibold text-gray-300">Phone</h3>
-                        <p>Main: <a href="tel:+15551234567" class="text-green-300 hover:text-green-200">+1 (555) 123-4567</a></p>
-                        <p>Support: <a href="tel:+15557654321" class="text-green-300 hover:text-green-200">+1 (555) 765-4321</a></p>
-                    </div>
-                    <div class="mb-4">
-                        <h3 class="text-lg font-semibold text-gray-300">Email</h3>
-                        <p><a href="mailto:info@cyberhunt.com" class="text-green-300 hover:text-green-200">info@cyberhunt.com</a></p>
-                        <p><a href="mailto:support@cyberhunt.com" class="text-green-300 hover:text-green-200">support@cyberhunt.com</a></p>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-300">Business Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                        <p>Saturday: 10:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
+                    <div class="mt-6">
+                        <img src="/api/placeholder/600/300" alt="Map Placeholder" class="w-full h-48 object-cover rounded-md">
                     </div>
                 </div>
-            </div>
-
-            <!-- Map Placeholder -->
-            <div class="mt-8 bg-gray-700 rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-2xl font-semibold mb-4 text-green-400">Our Location</h2>
-                <img src="https://api.placeholder.co/600x300?text=Map+Placeholder" alt="Map of Cyberhunt Location" class="w-full rounded-lg">
             </div>
         </div>
     </section>
 
-    <!-- Footer (Consistent across all pages) -->
-    <footer class="bg-gray-800 py-8 md:py-12" data-animate>
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-green-400">Cyberhunt</h3>
-                    <p class="text-gray-300">
-                        Leading the way in blockchain technology solutions. Secure, scalable, and innovative.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-green-400">Quick Links</h3>
-                    <ul class="text-gray-300">
-                        <li><a href="/" class="hover:text-green-200">Home</a></li>
-                        <li><a href="/services" class="hover:text-green-200">Services</a></li>
-                        <li><a href="/about" class="hover:text-green-200">About</a></li>
-                        <li><a href="/contact" class="hover:text-green-200">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-green-400">Services</h3>
-                    <ul class="text-gray-300">
-                        <li><a href="#" class="hover:text-green-200">Blockchain Development</a></li>
-                        <li><a href="#" class="hover:text-green-200">Smart Contracts</a></li>
-                        <li><a href="#" class="hover:text-green-200">Security Audits</a></li>
-                        <li><a href="#" class="hover:text-green-200">Consulting</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-green-400">Contact Us</h3>
-                    <p class="text-gray-300">
-                        123 Blockchain Avenue, Silicon Valley, CA 94043
-                    </p>
-                    <p class="text-gray-300">
-                        Email: <a href="mailto:info@cyberhunt.com" class="hover:text-green-200">info@cyberhunt.com</a>
-                    </p>
-                    <p class="text-gray-300">
-                        Phone: <a href="tel:+15551234567" class="hover:text-green-200">+1 (555) 123-4567</a>
-                    </p>
-                </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4">About Cyberhunt</h3>
+                <p class="text-gray-400">Cyberhunt is a leading advertising agency dedicated to helping businesses grow through innovative and effective marketing strategies.</p>
             </div>
-            <div class="mt-6 text-center text-gray-400">
-                &copy; 2024 Cyberhunt. All rights reserved.
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="/services" class="hover:text-gray-300">Services</a></li>
+                    <li><a href="/portfolio" class="hover:text-gray-300">Portfolio</a></li>
+                    <li><a href="/about" class="hover:text-gray-300">About</a></li>
+                    <li><a href="/contact" class="hover:text-gray-300">Contact</a></li>
+                </ul>
             </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Information</h3>
+                <p class="text-gray-400">123 Cyber Lane, Suite 200, Innovation City, CA 91234</p>
+                <p class="text-gray-400">Phone: (555) 123-4567</p>
+                <p class="text-gray-400">Email: info@cyberhunt.com</p>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-gray-500">© 2024 Cyberhunt. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // Basic animation using data-animate attributes
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('[data-animate]');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+            animatedElements.forEach(element => {
+                const animationType = element.getAttribute('data-animate');
+                const delay = element.getAttribute('data-animate-delay') || '0';
 
-         // Animation on Scroll
-         const animatedElements = document.querySelectorAll('[data-animate]');
+                element.style.opacity = '0';
+                element.style.transition = `opacity 0.5s ease-in-out ${delay}s`;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    observer.unobserve(entry.target); // Stop observing after animating once
-                }
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.classList.add(`animate__animated`, `animate__${animationType}`);
+                }, 50);
             });
-        });
-
-        animatedElements.forEach((element) => {
-            observer.observe(element);
         });
     </script>
 </body>
 </html>
       </main>
-      <footer class="bg-gray-800 py-12 md:py-16 lg:py-20">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-green-300">Cyberhunt</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Pioneering blockchain solutions for a secure and transparent future.
-                    </p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-green-300 transition duration-300">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.663 9.15 8.431 9.806v-7.299H6.924v-2.706h2.507v-1.927c0-2.216.666-3.485 3.593-3.485.981 0 1.951.138 2.216.165v2.451h-1.511c-1.048 0-1.264.807
-
-<!-- SERVICES SECTION -->
-<section id=" services"="" class="bg-gray-900 text-white py-20 overflow-hidden">
-    </path></svg></a><div class="container mx-auto px-4"><a href="#" class="text-gray-400 hover:text-green-300 transition duration-300">
-        <div class="text-center mb-16" data-animate="fade-in">
-            <h2 class="text-4xl font-extrabold text-green-400 mb-4">Our Blockchain Solutions</h2>
-            <p class="text-lg text-gray-300">Empowering businesses with innovative and secure blockchain technology.</p>
-        </div>
-
-        </a><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><a href="#" class="text-gray-400 hover:text-green-300 transition duration-300">
-
-            <!-- Service 1 -->
-            </a><div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-animate="slide-in-left"><a href="#" class="text-gray-400 hover:text-green-300 transition duration-300">
-                </a><div class="p-6"><a href="#" class="text-gray-400 hover:text-green-300 transition duration-300">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.5 4.5L21.75 6M2.25 6l18 12M3 2.25h1.5m13.5 0h1.5m-15 0l2.25 2.25M21 2.25l-2.25 2.25M3 19.5h1.5m13.5 0h1.5m-15 0l2.25-2.25M21 19.5l-2.25-2.25"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Decentralized Application (DApp) Development</h3>
-                    <p class="text-gray-400">We build secure and scalable DApps tailored to your specific business needs, leveraging the power of blockchain technology.</p>
-                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
-                        <li>Smart Contract Development</li>
-                        <li>UI/UX Design</li>
-                        <li>Blockchain Integration</li>
-                        <li>Testing and Auditing</li>
-                    </ul>
-                    </a><a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-animate="slide-in-up">
-                <div class="p-6">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a3 3 0 00-3-3H7.5a3 3 0 00-3 3v10.5a3 3 0 003 3h8.25a3 3 0 003-3v-3.75m-9.375.75h1.5m-1.5 1.5h1.5m-1.5 3h1.5m-3-6h.375m-3 6h.375m-3-6h.375m-3 6h.375"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Smart Contract Auditing &amp; Security</h3>
-                    <p class="text-gray-400">Ensure the integrity and security of your smart contracts with our comprehensive auditing services.</p>
-                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
-                        <li>Vulnerability Assessment</li>
-                        <li>Code Review</li>
-                        <li>Gas Optimization</li>
-                        <li>Formal Verification</li>
-                    </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-animate="slide-in-right">
-                <div class="p-6">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-4.037m-7.328 2.73a11.07 11.07 0 000 3.294m1.311 1.018l-1.07-1.019a11.071 11.071 0 00-3.294 0c.159.403.405.76.78 1.082l1.07 1.019m-1.07-1.019c.548.919 1.164 1.71 1.846 2.372l1.07 1.019m-1.724-1.175l1.724 1.175M4.5 6.364l1.091-1.091M19.5 6.364l-1.091-1.091M4.5 17.636l1.091 1.091M19.5 17.636l-1.091 1.091"></path>
-                        </svg>
-
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Blockchain Consulting</h3>
-                    <p class="text-gray-400">Expert guidance on integrating blockchain solutions into your existing business infrastructure.</p>
-                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
-                        <li>Strategy Development</li>
-                        <li>Technology Selection</li>
-                        <li>Implementation Planning</li>
-                        <li>Training &amp; Support</li>
-                    </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 md:col-span-2" data-animate="slide-in-left">
-                <div class="p-6">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Custom Blockchain Development</h3>
-                    <p class="text-gray-400">Tailored blockchain solutions designed to meet your unique business requirements. From private blockchains to consortium networks, we've got you covered.</p>
-                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
-                        <li>Private Blockchain Development</li>
-                        <li>Consortium Blockchain Development</li>
-                        <li>Hybrid Blockchain Development</li>
-                        <li>Tokenization Services</li>
-                    </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:col-span-1" data-animate="slide-in-right">
-                <div class="p-6">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2 text-green-300">Blockchain Integration</h3>
-                    <p class="text-gray-400">Seamlessly integrate blockchain technology into your existing systems and workflows to improve efficiency and transparency.</p>
-                    <ul class="list-disc list-inside mt-4 text-sm text-gray-400">
-                        <li>API Integration</li>
-                        <li>Legacy System Integration</li>
-                        <li>Data Migration</li>
-                        <li>Workflow Automation</li>
-                    </ul>
-                    <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">Learn More</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div></div></div></div></footer>
+      
     </body>
     </html>
