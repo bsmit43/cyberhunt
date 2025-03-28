@@ -1,46 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cyberhunt - Professional website">
+  <meta name="description" content="test - Professional website">
   <meta name="generator" content="Website Generator">
-  <title>Cyberhunt</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="font-sans antialiased bg-gray-50">
+  <meta name="theme-color" content="hsl(210, 86%, 40%)">
+  <title>test</title>
   
-<!-- NAV SECTION -->
-<nav class="bg-black text-white sticky top-0 z-50" data-animate="fade-down">
-    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold tracking-tight">
-            <span class="text-primary">Cyber</span>Hunt
-        </a>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+      /* Calm Healthcare Style - Soothing colors and gentle animations */
+      body{font-family:'Inter', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+      h1,h2,h3,h4,h5,h6{font-family:'Inter', sans-serif}
+      section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+      header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:500px;display:flex;align-items:center}
+      [data-animate]{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}[data-animate].visible{opacity:1;transform:translateY(0)}
+      .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 1px 3px rgba(0,0,0,.08);transition:all .4s ease;width:100%}
+      ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:#f5f7fa}::-webkit-scrollbar-thumb{background:hsl(210, 86%, 40%);border-radius:8px}::-webkit-scrollbar-thumb:hover{background:hsl(210, 86%, 30%)}
+      body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(210, 86%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+      @media print{[data-animate]{opacity:1;transform:none}}
+  </style>
+  
+  <script>
+      tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(210, 86%, 95%)","100":"hsl(210, 86%, 90%)","200":"hsl(210, 86%, 80%)","300":"hsl(210, 86%, 70%)","400":"hsl(210, 86%, 60%)","500":"hsl(210, 86%, 50%)","600":"hsl(210, 86%, 40%)","700":"hsl(210, 86%, 30%)","800":"hsl(210, 86%, 20%)","900":"hsl(210, 86%, 10%)"}},fontFamily:{sans:[''Inter'','system-ui','sans-serif'],heading:[''Inter'','sans-serif']}}}}
+  </script>
+</head>
+<body class="antialiased text-gray-800">
+  <nav class="bg-gradient-to-r from-cream to-green py-4 fixed top-0 w-full z-50" data-animate="slide-in-top">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center">
+                <img src="/api/placeholder/50/50" alt="Test Logo" class="h-10 w-10 mr-2 rounded-full">
+                <span class="font-semibold text-xl text-black">Test</span>
+            </a>
 
-        <div class="hidden md:flex items-center space-x-6">
-            <a href="/" class="hover:text-gray-300 transition-colors duration-200">Home</a>
-            <a href="/services" class="hover:text-gray-300 transition-colors duration-200">Services</a>
-            <a href="/portfolio" class="hover:text-gray-300 transition-colors duration-200">Portfolio</a>
-            <a href="/about" class="hover:text-gray-300 transition-colors duration-200">About Us</a>
-            <a href="/contact" class="hover:text-gray-300 transition-colors duration-200">Contact</a>
+            <!-- Mobile Menu Button (Hidden on larger screens) -->
+            <button id="mobile-menu-button" class="lg:hidden text-black focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links (Hidden on mobile) -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="/" class="text-black hover:text-gray-700">Home</a>
+                <a href="/products" class="text-black hover:text-gray-700">Products</a>
+                <a href="/about" class="text-black hover:text-gray-700">About Us</a>
+                <a href="/services" class="text-black hover:text-gray-700">Services</a>
+                <a href="/contact" class="text-black hover:text-gray-700">Contact</a>
+                <a href="/blog" class="text-black hover:text-gray-700">Blog</a>
+                <a href="/faq" class="text-black hover:text-gray-700">FAQ</a>
+                <a href="/rewards" class="text-black hover:text-gray-700">Rewards</a>
+                <a href="/ingredients" class="text-black hover:text-gray-700">Ingredients</a>
+            </div>
+
+            <!-- Cart Icon (Always visible) -->
+            <a href="/cart" class="text-black hover:text-gray-700 relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2.3a.9.9 0 00.8.4H21l-.7-2.3a.9.9 0 00-.8-.4H5z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 16.5h2l.4 2.3a.9.9 0 00.8.4H21l-.7-2.3a.9.9 0 00-.8-.4H5z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">9</span>
+            </a>
         </div>
 
-        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 py-4">
-        <div class="container mx-auto px-4 flex flex-col space-y-3">
-            <a href="/" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Home</a>
-            <a href="/services" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Services</a>
-            <a href="/portfolio" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Portfolio</a>
-            <a href="/about" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
-            <a href="/contact" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Contact</a>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="lg:hidden hidden mt-4">
+            <a href="/" class="block py-2 px-4 text-black hover:bg-gray-100">Home</a>
+            <a href="/products" class="block py-2 px-4 text-black hover:bg-gray-100">Products</a>
+            <a href="/about" class="block py-2 px-4 text-black hover:bg-gray-100">About Us</a>
+            <a href="/services" class="block py-2 px-4 text-black hover:bg-gray-100">Services</a>
+            <a href="/contact" class="block py-2 px-4 text-black hover:bg-gray-100">Contact</a>
+            <a href="/blog" class="block py-2 px-4 text-black hover:bg-gray-100">Blog</a>
+            <a href="/faq" class="block py-2 px-4 text-black hover:bg-gray-100">FAQ</a>
+            <a href="/rewards" class="block py-2 px-4 text-black hover:bg-gray-100">Rewards</a>
+            <a href="/ingredients" class="block py-2 px-4 text-black hover:bg-gray-100">Ingredients</a>
         </div>
     </div>
 
@@ -53,384 +103,778 @@
         });
     </script>
 </nav>
+  <main>
+      
+<!-- NAV SECTION -->
+
 
 <!-- HEADER SECTION -->
-<header class="bg-gradient-to-r from-gray-900 to-black text-white py-6 md:py-8 lg:py-12" data-animate="fade-down">
-    <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <nav class="flex items-center justify-between">
-            <a href="/" class="text-2xl md:text-3xl lg:text-4xl font-bold text-white hover:text-gray-200 transition-colors duration-300">
-                Cyberhunt
-            </a>
-            <div class="hidden md:flex space-x-4 lg:space-x-6">
-                <a href="/services" class="hover:text-gray-300 transition-colors duration-300">Services</a>
-                <a href="/portfolio" class="hover:text-gray-300 transition-colors duration-300">Portfolio</a>
-                <a href="/about" class="hover:text-gray-300 transition-colors duration-300">About Us</a>
-                <a href="/contact" class="hover:text-gray-300 transition-colors duration-300">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-md">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test - Beauty and Cosmetics Retail</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom Styles */
+    .hero-gradient {
+      background: linear-gradient(to right, rgba(144, 238, 144, 0.7), rgba(245, 245, 220, 0.7)); /* LightGreen and Beige overlay */
+    }
 
-        <div id="mobile-menu" class="hidden md:hidden mt-4">
-            <a href="/services" class="block py-2 px-4 text-sm hover:bg-gray-800 transition-colors duration-300">Services</a>
-            <a href="/portfolio" class="block py-2 px-4 text-sm hover:bg-gray-800 transition-colors duration-300">Portfolio</a>
-            <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-800 transition-colors duration-300">About Us</a>
-            <a href="/contact" class="block py-2 px-4 text-sm hover:bg-gray-800 transition-colors duration-300">Contact</a>
-        </div>
+    .navbar-gradient {
+      background: linear-gradient(to right, rgba(144, 238, 144, 0.9), rgba(245, 245, 220, 0.9));
+    }
 
-        <div class="mt-12 md:mt-16 lg:mt-20 text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                Ignite Your Brand's Potential
-            </h1>
-            <p class="mt-4 md:mt-6 lg:mt-8 text-lg md:text-xl lg:text-2xl text-gray-300">
-                Data-driven advertising solutions for explosive growth.
-            </p>
-            <div class="mt-8 md:mt-10 lg:mt-12 flex items-center justify-center space-x-4">
-                <a href="/contact" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300">
-                    Get a Free Consultation
-                </a>
-                <a href="/portfolio" class="bg-transparent border border-gray-300 hover:border-gray-200 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300">
-                    View Our Work
-                </a>
+    .footer-gradient {
+      background: linear-gradient(to right, rgba(144, 238, 144, 0.9), rgba(245, 245, 220, 0.9));
+    }
+  </style>
+</head>
+<body class="bg-cream font-sans">
+
+  <!-- Header Section -->
+  
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="relative overflow-hidden py-20 bg-cream-100">
+    <div class="container mx-auto px-4">
+        <div class="lg:flex lg:items-center lg:justify-between">
+            <div class="lg:w-1/2 mb-10 lg:mb-0" data-animate="fade-right">
+                <img src="/images/gd8d459bfb399e25ee24ebbfdd19d638d9dd35579521109996f7097c0cee04b7b4dcdb16b1d7eb7daae8e513eb8e0c6f4df1caa5c663dbe71e8aa684f2987edb6_640.jpg" alt="Woman applying makeup" class="rounded-xl shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="lg:w-1/2 lg:pl-16" data-animate="fade-left">
+                <h2 class="text-3xl font-extrabold text-green-900 mb-6">Our Story: Beauty Rooted in Nature</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    At test, we believe that beauty should be a reflection of your inner radiance, enhanced by the purity of nature. Founded in [Year Founded] by [Founder's Name], our journey began with a simple desire: to create high-quality, sustainable cosmetics that are kind to your skin and the planet.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Frustrated by the harsh chemicals and unsustainable practices prevalent in the beauty industry, [Founder's Name] embarked on a mission to source the finest natural ingredients from around the world. We partner with ethical and responsible suppliers who share our commitment to environmental stewardship and fair labor practices.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Our products are meticulously crafted in small batches to ensure the highest quality and freshness. We use only plant-based oils, botanical extracts, and mineral pigments, carefully selected for their nourishing and revitalizing properties. We are proud to be cruelty-free, vegan, and free from parabens, sulfates, phthalates, and artificial fragrances.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    But test is more than just a cosmetics brand. We are a community of conscious consumers who believe in the power of beauty to inspire confidence and self-expression. We are committed to empowering our customers with knowledge about natural ingredients and sustainable beauty practices.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Join us on our journey to redefine beauty – one that is rooted in nature, driven by compassion, and inspired by you.
+                </p>
+                <div class="flex items-center mt-8">
+                    <a href="/products" class="inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out">
+                        Explore Our Products
+                    </a>
+                    <a href="/sustainability" class="ml-4 inline-block text-green-700 hover:text-green-900 font-medium py-3 px-6 rounded-lg transition duration-300 ease-in-out">
+                        Our Sustainability Commitment
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <style>
-        #mobile-menu.hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
 
-            mobileMenuButton.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
-</header>
-
-<!-- ABOUT SECTION -->
-<section id="about" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="lg:flex lg:items-center lg:justify-between">
-            <div class="lg:w-1/2" data-animate="fade-right">
-                <img src="/images/g87701803123e2e6ad84691056cac9f348cd9a86c1559933e7fbe3e1de233944ab9c50beae70633e993da7087a745af4d_640.jpg" alt="About Cyberhunt" class="rounded-lg shadow-lg">
-            </div>
-            <div class="lg:w-1/2 mt-10 lg:mt-0 lg:pl-16" data-animate="fade-left">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6">About Cyberhunt Advertising</h2>
-                <p class="text-lg text-gray-700 mb-8">Cyberhunt is a cutting-edge advertising agency dedicated to crafting innovative and impactful campaigns that resonate with today's digital landscape. We combine data-driven insights with creative storytelling to help businesses of all sizes achieve their marketing goals.</p>
-                <p class="text-lg text-gray-700 mb-8">Our team of experienced marketers, designers, and developers are passionate about delivering exceptional results. We specialize in a wide range of advertising services, including:</p>
-                <ul class="list-disc list-inside text-gray-700 mb-8">
-                    <li>Search Engine Optimization (SEO)</li>
-                    <li>Pay-Per-Click (PPC) Advertising</li>
-                    <li>Social Media Marketing</li>
-                    <li>Content Marketing</li>
-                    <li>Email Marketing</li>
-                    <li>Display Advertising</li>
-                    <li>Video Marketing</li>
-                </ul>
-                <p class="text-lg text-gray-700 mb-8">We believe in building strong, long-lasting relationships with our clients. We take the time to understand your business, your target audience, and your unique challenges. This allows us to develop customized advertising strategies that are tailored to your specific needs.</p>
-                <p class="text-lg text-gray-700">At Cyberhunt, we are committed to transparency, accountability, and delivering measurable results. We provide regular reports and updates so you can see exactly how your advertising campaigns are performing.</p>
-            </div>
-        </div>
+    <!-- Background Pattern (Subtle) -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="pattern-circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="10" cy="10" r="2" fill="#A7D1AB"/>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#pattern-circles)"/>
+        </svg>
     </div>
 </section>
 
 <!-- SERVICES SECTION -->
-<section id="services" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-4" data-animate="fade-in">Our Services</h2>
-            <p class="text-gray-600 text-lg" data-animate="fade-in" data-animate-delay="200">We offer a comprehensive suite of advertising services designed to elevate your brand and drive results.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up">
-                <img src="/images/g87701803123e2e6ad84691056cac9f348cd9a86c1559933e7fbe3e1de233944ab9c50beae70633e993da7087a745af4d_640.jpg" alt="Search Engine Optimization" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Search Engine Optimization (SEO)</h3>
-                <p class="text-gray-600">Improve your website's visibility on search engines and attract organic traffic with our expert SEO strategies.</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="100">
-                <img src="/images/gf27305e031d597711abd650575f2f7851e929b07f6c797d110ef98a29a299502e593626382be217d5e6a223725ecf7b0_640-1.jpg" alt="Pay-Per-Click Advertising" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Pay-Per-Click (PPC) Advertising</h3>
-                <p class="text-gray-600">Drive targeted traffic to your website instantly with our data-driven PPC campaigns on Google Ads and other platforms.</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="200">
-                <img src="/images/g34a322ac22490f2ff60476955b0ccad3d538661c831865897c475e9837d40f865a54c7ecdd23a78513868eda58f193f26869136707a99c9e4a047fef3433a988_640.jpg" alt="Social Media Marketing" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Social Media Marketing</h3>
-                <p class="text-gray-600">Build a strong online presence, engage with your audience, and generate leads through our strategic social media marketing services.</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up">
-                <img src="/images/g1e58bf692b2a2fa0b33f5fa03b0f7efee2de1cbe2da83215becdfc921960329a244b038cbd2dc5a4074271b1265d0c3c182c0f9469abde7fdc70b51e3da54446_640.jpg" alt="Content Marketing" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Content Marketing</h3>
-                <p class="text-gray-600">Attract and retain your target audience with valuable and engaging content that drives conversions and builds brand authority.</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="100">
-                <img src="/images/g07770de10d0501f5b7dbc1713c040d36381d5b581f1518cc78a6e01bd5b0f7ba15dbffb1b181d73fa8875b0b750e0cc2_640.jpg" alt="Email Marketing" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Email Marketing</h3>
-                <p class="text-gray-600">Nurture leads, promote your products or services, and drive sales with our targeted and automated email marketing campaigns.</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="200">
-                <img src="/images/gaa1ce0ce9943c156d9a5942710fc9e159461a3c85806d3cb3f00be9c98b15058387a50ef2434bae3a6703071b3620762b80b671ab0edb7a8693a6f7dbd20eb89_640.jpg" alt="Analytics & Reporting" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Analytics & Reporting</h3>
-                <p class="text-gray-600">Track your campaign performance, measure ROI, and gain valuable insights with our comprehensive analytics and reporting services.</p>
-            </div>
-
-        </div>
+<section id="services" class="py-16 bg-cream-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold text-green-700 mb-4" data-animate="fade-in">Our Premium Services</h2>
+      <p class="text-gray-600" data-animate="fade-in" data-animate-delay="200">
+        Experience the ultimate in beauty and wellness with our curated selection of services.
+      </p>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Service Card 1: Facial Treatments -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-left">
+        <img src="/images/gd8d459bfb399e25ee24ebbfdd19d638d9dd35579521109996f7097c0cee04b7b4dcdb16b1d7eb7daae8e513eb8e0c6f4df1caa5c663dbe71e8aa684f2987edb6_640.jpg" alt="Facial Treatment" class="w-full h-64 object-cover object-center">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-600 mb-2">Facial Treatments</h3>
+          <p class="text-gray-700 mb-4">
+            Indulge in our luxurious facial treatments, tailored to your specific skin type and concerns. From deep cleansing to anti-aging, we'll leave your skin glowing.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-500">
+            <li>Hydrating Facials</li>
+            <li>Acne Treatment</li>
+            <li>Anti-Aging Facials</li>
+            <li>Brightening Facials</li>
+          </ul>
+          <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 2: Massage Therapy -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-up">
+        <img src="/images/g4566969d14244073a0b405f10ad8483ede4be3d2c8abd14b10766a5e9d8380b16a59a987e0704989e94ea993febdc80f3760ac6e55d4a12fd2dd060e31e85878_640.jpg" alt="Massage Therapy" class="w-full h-64 object-cover object-center">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-600 mb-2">Massage Therapy</h3>
+          <p class="text-gray-700 mb-4">
+            Relax and rejuvenate with our expert massage therapists. We offer a variety of massage techniques to relieve stress, ease muscle tension, and improve circulation.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-500">
+            <li>Swedish Massage</li>
+            <li>Deep Tissue Massage</li>
+            <li>Hot Stone Massage</li>
+            <li>Aromatherapy Massage</li>
+          </ul>
+          <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 3: Hair Styling -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-right">
+        <img src="/images/g1a518ea5e5dc43e53a8a58973938e2419beb7fe6f09a51ed7c7e55d7e85eff35971e57598ab44e97574ada6c0315a7d08c0fadf3b4abaad92542ace3dec42e5c_640.jpg" alt="Hair Styling" class="w-full h-64 object-cover object-center">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-600 mb-2">Hair Styling</h3>
+          <p class="text-gray-700 mb-4">
+            Transform your look with our professional hair styling services. From haircuts and coloring to updos and extensions, our stylists will create the perfect style for you.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-500">
+            <li>Haircuts & Styling</li>
+            <li>Hair Coloring</li>
+            <li>Highlights & Balayage</li>
+            <li>Updos & Special Occasions</li>
+          </ul>
+          <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 4: Manicures & Pedicures -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 md:col-span-1 lg:col-span-1" data-animate="slide-in-left">
+        <img src="/images/gd02892a904071ed5f71e1e99c4f9b8eed8e41b5796de8dcdfe4bb6ae25ae3f3aaf3f150bfd6a3119f924f5752463a92f65476e4f96a4e16df1b2993e1ded7ae9_640.jpg" alt="Manicures & Pedicures" class="w-full h-64 object-cover object-center">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-600 mb-2">Manicures & Pedicures</h3>
+          <p class="text-gray-700 mb-4">
+            Pamper your hands and feet with our expert manicures and pedicures. Choose from a variety of polish colors and nail art designs.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-500">
+            <li>Classic Manicure</li>
+            <li>Gel Manicure</li>
+            <li>Spa Pedicure</li>
+            <li>Nail Art</li>
+          </ul>
+          <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 5: Waxing & Hair Removal -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 md:col-span-1 lg:col-span-1" data-animate="slide-in-right">
+        <img src="/api/placeholder/640/480" alt="Waxing & Hair Removal" class="w-full h-64 object-cover object-center">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-600 mb-2">Waxing & Hair Removal</h3>
+          <p class="text-gray-700 mb-4">
+            Achieve smooth, hair-free skin with our professional waxing and hair removal services. We use gentle techniques and high-quality products for optimal results.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-500">
+            <li>Eyebrow Waxing</li>
+            <li>Lip Waxing</li>
+            <li>Bikini Waxing</li>
+            <li>Leg Waxing</li>
+          </ul>
+          <a href="#" class="inline-block mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- FEATURES SECTION -->
-<section id="features" class="py-20 bg-gray-50">
+<section class="py-16 bg-cream">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-4" data-animate="fade-in">
-                Unleash Your Brand's Potential with Cyberhunt
-            </h2>
-            <p class="text-gray-600 text-lg" data-animate="fade-in" data-animate-delay="200">
-                We provide cutting-edge advertising solutions tailored to your unique needs.
-            </p>
-        </div>
+        <h2 class="text-3xl font-semibold text-center text-green-800 mb-8" data-animate="fade-in">
+            Why Choose Test?
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up">
-                <img src="/images/g87701803123e2e6ad84691056cac9f348cd9a86c1559933e7fbe3e1de233944ab9c50beae70633e993da7087a745af4d_640.jpg" alt="Data-Driven Strategies" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Data-Driven Strategies</h3>
-                <p class="text-gray-600">
-                    We leverage data analytics to understand your target audience and optimize campaigns for maximum ROI.
-                </p>
+
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-left">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-800 mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-green-700 mb-2">Natural Ingredients</h3>
+                    <p class="text-gray-600 text-center">
+                        We believe in the power of nature. Our products are formulated with carefully selected natural
+                        ingredients, free from harsh chemicals and artificial additives.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="200">
-                <img src="/images/g36a996e8b958217fc240062834194e21f9e9bbb64169756e1e0d81e711263c64456e3807cba629611974072f081deb869c36df0e5a684d8e11dc2aae4d54840d_640-1.jpg" alt="Creative Content Creation" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Creative Content Creation</h3>
-                <p class="text-gray-600">
-                    Our team of talented creatives crafts compelling content that captures attention and drives engagement.
-                </p>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="fade-in">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-800 mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125H5.625c-.621 0-1.125-.504-1.125-1.125V6.75c0-.621.504-1.125 1.125-1.125h9c.621 0 1.125.504 1.125 1.125v10.5M8.25 8.25l3 3m-3-3h7.5m-7.5 3v7.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-green-700 mb-2">Cruelty-Free</h3>
+                    <p class="text-gray-600 text-center">
+                        We are committed to ethical practices. None of our products are tested on animals, and we
+                        only work with suppliers who share our values.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="400">
-                <img src="/images/gedf5eb2591d2851a68cba75b45c4033ed1144e9844ef72d74364c2949a4ff4272f224a5890b8d78987b21cf4c9b322bc8ad2b8077adec5a4bf38416eb2d0051e_640.jpg" alt="Multi-Channel Marketing" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Multi-Channel Marketing</h3>
-                <p class="text-gray-600">
-                    We execute integrated marketing campaigns across various channels to reach your target audience where they are.
-                </p>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-right">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-800 mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-1.5 7.5 1.5m-15 0l7.5 1.5 7.5-1.5M4.5 12.75L6 15.75m15-3l-1.5 3m-15 0l-1.5-3m1.5 3l7.5 7.5m-15 0l7.5-7.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-green-700 mb-2">Sustainable Practices</h3>
+                    <p class="text-gray-600 text-center">
+                        We are dedicated to minimizing our environmental impact. Our packaging is eco-friendly, and we
+                        strive to reduce waste throughout our production process.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up">
-                <img src="/images/gf148acc68beaffae625eb488715444387d2a1407403db7c287a4f571941761c187c089c33b4ba9fd8b6f77ffb2603545d21c555bceb55ad8635c48d559b4b862_640.jpg" alt="Social Media Management" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Social Media Management</h3>
-                <p class="text-gray-600">
-                    We build and manage engaging social media presences that connect with your audience and drive brand awareness.
-                </p>
+            <!-- Feature 4 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-left">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-800 mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.63 0 8.567 3.01 9.964 7.183a1.012 1.012 0 010 .639c-1.383 4.173-5.32 7.183-9.964 7.183-4.63 0-8.567-3.01-9.964-7.183z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-green-700 mb-2">Expert Formulations</h3>
+                    <p class="text-gray-600 text-center">
+                        Our products are developed by experienced dermatologists and cosmetic chemists to ensure the
+                        highest quality and effectiveness.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="200">
-                <img src="/images/g34a322ac22490f2ff60476955b0ccad3d538661c831865897c475e9837d40f865a54c7ecdd23a78513868eda58f193f26869136707a99c9e4a047fef3433a988_640.jpg" alt="Search Engine Optimization (SEO)" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Search Engine Optimization (SEO)</h3>
-                <p class="text-gray-600">
-                    We optimize your website and content to rank higher in search results and attract organic traffic.
-                </p>
+            <!-- Feature 5 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="fade-in">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-800 mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512m0 13.534A8.967 8.967 0 016 20.25c1.052 0 2.062-.18 3-.512m6-13.534A8.966 8.966 0 0118 3.75c1.052 0 2.062.18 3 .512m0 13.534A8.966 8.966 0 0118 20.25c-1.052 0-2.062-.18-3-.512m-3-6.042h.01m6 0h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-green-700 mb-2">Personalized Solutions</h3>
+                    <p class="text-gray-600 text-center">
+                        We offer a wide range of products to address various skin types and concerns, helping you
+                        find the perfect solutions for your unique needs.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" data-animate="fade-up" data-animate-delay="400">
-                <img src="/images/gcdfb4d06ac53f183f4db7a9d4639f0e36c84a9489b844aa1cf82d4be31c120b92b9c0e73c3fa6cceeab46d83c3c04947702f8391c04387c12b19f1b11af887f1_640.jpg" alt="Performance Reporting & Analysis" class="w-full h-48 object-cover rounded-md mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Performance Reporting & Analysis</h3>
-                <p class="text-gray-600">
-                    We provide transparent reporting and in-depth analysis to track campaign performance and identify areas for improvement.
-                </p>
+            <!-- Feature 6 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-right">
+                <div class="p-6">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-800 mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-green-700 mb-2">Worldwide Shipping</h3>
+                    <p class="text-gray-600 text-center">
+                        We ship our products worldwide, so you can enjoy the benefits of Test, no matter where you
+                        are.
+                    </p>
+                </div>
             </div>
+
         </div>
     </div>
 </section>
 
 <!-- TESTIMONIALS SECTION -->
-<section class="py-16 bg-gray-50" data-animate="fade-in">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-semibold text-gray-800 mb-8">What Our Clients Say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section class="py-16 bg-cream-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-semibold text-center text-green-800 mb-8" data-animate="fade-in">What Our Customers Are Saying</h2>
 
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/images/g1e58bf692b2a2fa0b33f5fa03b0f7efee2de1cbe2da83215becdfc921960329a244b038cbd2dc5a4074271b1265d0c3c182c0f9469abde7fdc70b51e3da54446_640.jpg" alt="Client 1" class="w-20 h-20 rounded-full mx-auto mb-4">
-                <p class="text-gray-700 italic mb-4">"Cyberhunt transformed our online presence. Their strategic campaigns drove significant traffic and increased our conversion rates. Highly recommended!"</p>
-                <p class="text-sm font-medium text-indigo-600">Jane Doe, CEO - Acme Corp</p>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/images/gaa1ce0ce9943c156d9a5942710fc9e159461a3c85806d3cb3f00be9c98b15058387a50ef2434bae3a6703071b3620762b80b671ab0edb7a8693a6f7dbd20eb89_640.jpg" alt="Client 2" class="w-20 h-20 rounded-full mx-auto mb-4">
-                <p class="text-gray-700 italic mb-4">"The team at Cyberhunt is incredibly responsive and creative. They understood our brand perfectly and delivered exceptional results. We saw a 30% increase in leads!"</p>
-                <p class="text-sm font-medium text-indigo-600">John Smith, Marketing Manager - Beta Industries</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/images/g89b3a650c57f5823f6fc1ba552780381d47b1b3d8a99db3e5d3c42afb33f6427edd8d76cc7981990984fdabd1ec2144575d4763578ee3b9e113eeeec120d651a_640.jpg" alt="Client 3" class="w-20 h-20 rounded-full mx-auto mb-4">
-                <p class="text-gray-700 italic mb-4">"We were struggling to reach our target audience. Cyberhunt's targeted advertising strategies helped us connect with the right customers and boost our sales significantly."</p>
-                <p class="text-sm font-medium text-indigo-600">Emily Brown, Founder - Gamma Solutions</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/images/gedf5eb2591d2851a68cba75b45c4033ed1144e9844ef72d74364c2949a4ff4272f224a5890b8d78987b21cf4c9b322bc8ad2b8077adec5a4bf38416eb2d0051e_640.jpg" alt="Client 4" class="w-20 h-20 rounded-full mx-auto mb-4">
-                <p class="text-gray-700 italic mb-4">"Cyberhunt provided exceptional service and exceeded our expectations. Their innovative approach to advertising helped us achieve our business goals faster than we thought possible."</p>
-                <p class="text-sm font-medium text-indigo-600">David Lee, CTO - Delta Technologies</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <img src="/images/g07770de10d0501f5b7dbc1713c040d36381d5b581f1518cc78a6e01bd5b0f7ba15dbffb1b181d73fa8875b0b750e0cc2_640.jpg" alt="Client 5" class="w-20 h-20 rounded-full mx-auto mb-4">
-                <p class="text-gray-700 italic mb-4">"From strategy to execution, Cyberhunt delivered outstanding results. Their data-driven approach and creative campaigns helped us increase brand awareness and drive sales."</p>
-                <p class="text-sm font-medium text-indigo-600">Sarah Williams, VP of Marketing - Epsilon Group</p>
-            </div>
-
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6" data-animate="slide-in-left">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/50/50" alt="Sarah Miller" class="rounded-full mr-4">
+          <div>
+            <p class="font-semibold text-green-700">Sarah Miller</p>
+            <p class="text-gray-500 text-sm">Verified Buyer</p>
+          </div>
         </div>
+        <p class="text-gray-700">"I've struggled with sensitive skin for years, but Test's products have been a game-changer! The calming cream is so gentle and effective. My skin feels hydrated and looks radiant. Highly recommend!"</p>
+        <div class="mt-4 flex items-center">
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6" data-animate="fade-in">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/50/50" alt="John Davis" class="rounded-full mr-4">
+          <div>
+            <p class="font-semibold text-green-700">John Davis</p>
+            <p class="text-gray-500 text-sm">Loyal Customer</p>
+          </div>
+        </div>
+        <p class="text-gray-700">"I love the commitment to natural ingredients. The face scrub is amazing, leaving my skin feeling refreshed and smooth without being harsh. Plus, the packaging is so eco-friendly! Test is my go-to for skincare now."</p>
+        <div class="mt-4 flex items-center">
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-lg shadow-md p-6" data-animate="slide-in-right">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/50/50" alt="Emily Chen" class="rounded-full mr-4">
+          <div>
+            <p class="font-semibold text-green-700">Emily Chen</p>
+            <p class="text-gray-500 text-sm">Beauty Blogger</p>
+          </div>
+        </div>
+        <p class="text-gray-700">"As a beauty blogger, I'm always looking for high-quality, ethical brands. Test exceeded my expectations! The lip balm is incredibly moisturizing, and the eyeshadow palette has gorgeous, long-lasting colors. A must-try for any beauty enthusiast!"</p>
+        <div class="mt-4 flex items-center">
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+          <svg class="w-4 h-4 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.632 1.175-6.545L.588 7.258l6.545-.953L10 1l2.867 6.305 6.545.953-4.715 4.829 1.175 6.545z"/></svg>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+<section id="contact" class="bg-cream py-16 w-full overflow-hidden">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-animate="fade-in">
-                Let's Connect.
-            </h2>
-            <p class="text-gray-600 dark:text-gray-300 text-lg" data-animate="fade-in" data-animate-delay="0.2">
-                Ready to elevate your brand? Reach out to us and let's discuss how Cyberhunt can help you achieve
-                your advertising goals.
-            </p>
+        <div class="text-center mb-12" data-animate="fade-in">
+            <h2 class="text-3xl lg:text-4xl font-semibold text-green-800 mb-4">Contact Us</h2>
+            <p class="text-gray-600">We'd love to hear from you!  Reach out with any questions, feedback, or inquiries.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8" data-animate="slide-in-left">
-                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Contact Information</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    We're here to answer your questions and provide you with the best advertising solutions.
-                </p>
-                <ul class="list-none">
-                    <li class="flex items-center mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.95l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        123 Main Street, Anytown, USA
-                    </li>
-                    <li class="flex items-center mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path
-                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.984.836l.74 4.46A1 1 0 016.353 12H13.647a1 1 0 01.984-.836l.74-4.46A1 1 0 0116.847 2H19a1 1 0 011 1v1a1 1 0 01-1 1H3a1 1 0 01-1-1V3z" />
-                        </svg>
-                        (555) 123-4567
-                    </li>
-                    <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M14.243 5.757a6 6 0 10-.986 8.486l-1.105 1.105a.75.75 0 01-1.06 0l-1.105-1.105a6 6 0 00.986-8.486A6 6 0 0014.243 5.757zM9 11a2 2 0 114 0 2 2 0 01-4 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <a href="mailto:info@cyberhunt.com"
-                            class="text-primary hover:underline">info@cyberhunt.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8" data-animate="slide-in-right">
-                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Send us a Message</h3>
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-md p-8" data-animate="slide-in-left">
+                <h3 class="text-xl font-semibold text-green-700 mb-4">Send us a Message</h3>
                 <form action="#" method="POST">
                     <div class="mb-4">
-                        <label for="name" class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2">Your
-                            Name</label>
-                        <input type="text" id="name" name="name"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700 dark:border-gray-600"
-                            placeholder="Your Name">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
                     </div>
                     <div class="mb-4">
-                        <label for="email" class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2">Your
-                            Email</label>
-                        <input type="email" id="email" name="email"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700 dark:border-gray-600"
-                            placeholder="Your Email">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
                     </div>
-                    <div class="mb-6">
-                        <label for="message"
-                            class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700 dark:border-gray-600"
-                            placeholder="Your Message"></textarea>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <button
-                            class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            type="submit">
-                            Send Message
-                        </button>
-                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
+                        Send Message
+                    </button>
                 </form>
+            </div>
+
+            <!-- Business Information & Map -->
+            <div class="bg-white rounded-xl shadow-md p-8" data-animate="slide-in-right">
+                <h3 class="text-xl font-semibold text-green-700 mb-4">Our Information</h3>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Address:</p>
+                    <p class="text-gray-600">123 Beauty Lane, Suite 200<br>Cityville, State 54321</p>
+                </div>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Phone:</p>
+                    <p class="text-gray-600">(555) 123-4567</p>
+                </div>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Email:</p>
+                    <p class="text-gray-600">info@testbeauty.com</p>
+                </div>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Business Hours:</p>
+                    <p class="text-gray-600">
+                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: Closed
+                    </p>
+                </div>
+
+                <!-- Google Map (Replace with your actual map embed code) -->
+                <div class="h-48 w-full rounded-lg overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.067042824978!2d-73.98573168456765!3d40.74844047928693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b311d3dd%3A0x258e84a1ca08612b!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1678880000000!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- FOOTER SECTION -->
-<footer class="bg-gray-900 text-white py-12 mt-24" data-animate="fade-up">
-    <div class="container mx-auto px-4">
+<footer class="bg-cream text-gray-800 py-12 border-t border-green-200">
+    <div class="container mx-auto px-4 md:px-8 lg:px-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-                <h3 class="text-lg font-semibold mb-4">Cyberhunt Advertising</h3>
-                <p class="text-gray-400">We are a leading advertising agency specializing in innovative and effective marketing solutions.</p>
+                <h3 class="text-lg font-semibold mb-4 text-green-600">About Test</h3>
+                <p class="text-sm">Test is dedicated to providing high-quality, sustainable beauty and cosmetic products. We believe in enhancing your natural beauty with ethically sourced ingredients and eco-friendly practices.</p>
                 <div class="mt-4 flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-green-600"><i class="fab fa-facebook-square fa-lg"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-green-600"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-green-600"><i class="fab fa-twitter-square fa-lg"></i></a>
                 </div>
             </div>
+
             <div>
-                <h3 class="text-lg font-semibold mb-4">Services</h3>
-                <ul class="text-gray-400">
-                    <li class="mb-2"><a href="#" class="hover:text-white">Digital Marketing</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">Social Media Management</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">Content Creation</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">SEO Optimization</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">PPC Advertising</a></li>
+                <h3 class="text-lg font-semibold mb-4 text-green-600">Customer Service</h3>
+                <ul class="text-sm">
+                    <li class="mb-2"><a href="#" class="hover:text-green-600">Contact Us</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-green-600">Shipping & Returns</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-green-600">FAQ</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-green-600">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-green-600">Terms & Conditions</a></li>
                 </ul>
             </div>
+
             <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul class="text-gray-400">
-                    <li class="mb-2"><a href="#" class="hover:text-white">About Us</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">Our Work</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">Case Studies</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">Testimonials</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-white">Contact Us</a></li>
+                <h3 class="text-lg font-semibold mb-4 text-green-600">Quick Links</h3>
+                <ul class="text-sm">
+                    <li class="mb-2"><a href="/" class="hover:text-green-600">Home</a></li>
+                    <li class="mb-2"><a href="/products" class="hover:text-green-600">Products</a></li>
+                    <li class="mb-2"><a href="/about" class="hover:text-green-600">About Us</a></li>
+                    <li class="mb-2"><a href="/blog" class="hover:text-green-600">Blog</a></li>
+                    <li class="mb-2"><a href="/careers" class="hover:text-green-600">Careers</a></li>
                 </ul>
             </div>
+
             <div>
-                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                <p class="text-gray-400 mb-2">123 Main Street, Anytown, USA</p>
-                <p class="text-gray-400 mb-2">Email: info@cyberhunt.com</p>
-                <p class="text-gray-400">Phone: (555) 123-4567</p>
+                <h3 class="text-lg font-semibold mb-4 text-green-600">Stay Updated</h3>
+                <p class="text-sm">Subscribe to our newsletter for exclusive deals and the latest beauty tips.</p>
+                <form class="mt-4">
+                    <div class="mb-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500 text-sm">
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-sm">Subscribe</button>
+                </form>
             </div>
         </div>
-        <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Cyberhunt Advertising. All rights reserved.</p>
+
+        <div class="mt-12 text-center text-sm text-gray-600">
+            <p>&copy; 2024 Test. All rights reserved.</p>
+            <p>Made with <i class="fas fa-heart text-red-500"></i> by [Your Name/Company]</p>
         </div>
     </div>
 </footer>
 
+  </main>
+  
+  <script>
+      document.addEventListener('DOMContentLoaded',function(){
+          // Animation system
+          const observer=new IntersectionObserver(entries=>{
+              entries.forEach((entry,i)=>{
+                  if(entry.isIntersecting){
+                      setTimeout(()=>{
+                          entry.target.classList.add('visible');
+                          // Handle staggered children if using that animation style
+                          if(entry.target.getAttribute('data-animate')==='stagger'){
+                              Array.from(entry.target.children).forEach((child,childIndex)=>{
+                                  child.style.setProperty('--child-index',childIndex);
+                              });
+                          }
+                      },i*100);
+                      observer.unobserve(entry.target);
+                  }
+              });
+          },{threshold:0.15,rootMargin:'0px 0px -100px 0px'});
+          
+          document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+          
+          // Fixed navigation
+          const nav=document.querySelector('nav');
+          if(nav){
+              const handleScroll=()=>{
+                  nav.classList[window.scrollY>100?'add':'remove']('nav-fixed');
+              };
+              window.addEventListener('scroll',handleScroll,{passive:true});
+              handleScroll();
+          }
+          
+          // Smooth scroll
+          document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+              anchor.addEventListener('click',function(e){
+                  e.preventDefault();
+                  const targetId=this.getAttribute('href');
+                  if(targetId==='#')return;
+                  const target=document.querySelector(targetId);
+                  if(target){
+                      const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-(nav?nav.offsetHeight:0)-20;
+                      window.scrollTo({top:targetPosition,behavior:'smooth'});
+                  }
+              });
+          });
+          
+          // Scroll progress indicator
+          const updateScrollProgress = () => {
+              const height=Math.max(
+                  document.body.scrollHeight,
+                  document.body.offsetHeight,
+                  document.documentElement.clientHeight,
+                  document.documentElement.scrollHeight,
+                  document.documentElement.offsetHeight
+              )-window.innerHeight;
+              
+              document.documentElement.style.setProperty('--scroll-progress',(window.scrollY/height*100)+'%');
+          };
+          
+          window.addEventListener('scroll', updateScrollProgress, {passive:true});
+          window.addEventListener('resize', updateScrollProgress, {passive:true});
+          updateScrollProgress();
+          
+          // Mobile menu with enhanced accessibility
+          const menuToggle=document.getElementById('mobile-menu-toggle');
+          const mobileMenu=document.getElementById('mobile-menu');
+          if(menuToggle&&mobileMenu){
+              menuToggle.addEventListener('click',()=>{
+                  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                  menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                  mobileMenu.classList.toggle('hidden');
+                  document.body.classList.toggle('overflow-hidden');
+              });
+              
+              // Close on click outside
+              document.addEventListener('click',e=>{
+                  if(mobileMenu&&!mobileMenu.classList.contains('hidden')&&
+                      menuToggle&&!menuToggle.contains(e.target)&&!mobileMenu.contains(e.target)){
+                      mobileMenu.classList.add('hidden');
+                      document.body.classList.remove('overflow-hidden');
+                      menuToggle.setAttribute('aria-expanded', 'false');
+                  }
+              });
+              
+              // Close on escape key
+              document.addEventListener('keydown', e => {
+                  if(e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                      mobileMenu.classList.add('hidden');
+                      document.body.classList.remove('overflow-hidden');
+                      menuToggle.setAttribute('aria-expanded', 'false');
+                  }
+              });
+          }
+          
+          // Accordions
+          document.querySelectorAll('[data-accordion-target]').forEach(btn=>{
+              btn.addEventListener('click',()=>{
+                  const target=document.querySelector(btn.getAttribute('data-accordion-target'));
+                  if(target){
+                      const isExpanded=btn.getAttribute('aria-expanded')==='true';
+                      target.classList.toggle('hidden');
+                      btn.setAttribute('aria-expanded',isExpanded?'false':'true');
+                      const icon=btn.querySelector('.accordion-icon');
+                      if(icon)icon.classList.toggle('rotate-180');
+                  }
+              });
+          });
+          
+          // Form validation
+          document.querySelectorAll('form').forEach(form=>{
+              form.addEventListener('submit',function(e){
+                  let valid=true;
+                  const requiredFields=form.querySelectorAll('[required]');
+                  
+                  requiredFields.forEach(field=>{
+                      if(!field.value.trim()){
+                          valid=false;
+                          field.classList.add('border-red-500');
+                          
+                          // Add error message if not already present
+                          let errorMsg=field.parentNode.querySelector('.error-message');
+                          if(!errorMsg){
+                              errorMsg=document.createElement('p');
+                              errorMsg.className='text-red-500 text-sm mt-1 error-message';
+                              errorMsg.textContent='This field is required';
+                              field.parentNode.appendChild(errorMsg);
+                          }
+                      }else{
+                          field.classList.remove('border-red-500');
+                          const errorMsg=field.parentNode.querySelector('.error-message');
+                          if(errorMsg)errorMsg.remove();
+                      }
+                  });
+                  
+                  if(!valid){
+                      e.preventDefault();
+                  }
+              });
+          });
+          
+          // Tabs functionality if present
+          document.querySelectorAll('[data-tabs]').forEach(tabGroup=>{
+              const tabs=tabGroup.querySelectorAll('[data-tab]');
+              const tabContents=document.querySelectorAll('[data-tab-content]');
+              
+              tabs.forEach(tab=>{
+                  tab.addEventListener('click',()=>{
+                      const target=tab.getAttribute('data-tab');
+                      
+                      // Update active tab state
+                      tabs.forEach(t=>{
+                          t.classList.remove('active-tab','text-primary-600','border-primary-600');
+                          t.setAttribute('aria-selected', 'false');
+                      });
+                      tab.classList.add('active-tab','text-primary-600','border-primary-600');
+                      tab.setAttribute('aria-selected', 'true');
+                      
+                      // Show correct content
+                      tabContents.forEach(content=>{
+                          if(content.getAttribute('data-tab-content')===target){
+                              content.classList.remove('hidden');
+                          }else{
+                              content.classList.add('hidden');
+                          }
+                      });
+                  });
+              });
+          });
+          
+          // Carousels
+          document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+              const slides=carousel.querySelectorAll('[data-slide]');
+              const prevBtn=carousel.querySelector('[data-carousel-prev]');
+              const nextBtn=carousel.querySelector('[data-carousel-next]');
+              
+              if(slides.length>0&&prevBtn&&nextBtn){
+                  let current=0,interval=null;
+                  
+                  slides[0].classList.remove('hidden');
+                  
+                  const updateIndicators=()=>{
+                      carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                          ind.classList[i===current?'add':'remove']('bg-primary-600');
+                          ind.classList[i!==current?'add':'remove']('bg-gray-300');
+                      });
+                  };
+                  
+                  const showSlide=idx=>{
+                      slides.forEach(s=>s.classList.add('hidden'));
+                      slides[idx].classList.remove('hidden');
+                      updateIndicators();
+                  };
+                  
+                  nextBtn.addEventListener('click',()=>{
+                      current=(current+1)%slides.length;
+                      showSlide(current);
+                  });
+                  
+                  prevBtn.addEventListener('click',()=>{
+                      current=(current-1+slides.length)%slides.length;
+                      showSlide(current);
+                  });
+                  
+                  updateIndicators();
+                  
+                  const startAuto=()=>{
+                      if(carousel.hasAttribute('data-auto')&&!interval){
+                          interval=setInterval(()=>{
+                              current=(current+1)%slides.length;
+                              showSlide(current);
+                          },5000);
+                      }
+                  };
+                  
+                  carousel.addEventListener('mouseenter',()=>{
+                      if(interval){clearInterval(interval);interval=null;}
+                  });
+                  
+                  carousel.addEventListener('mouseleave',startAuto);
+                  
+                  carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                      ind.addEventListener('click',()=>{
+                          current=i;
+                          showSlide(current);
+                      });
+                  });
+                  
+                  startAuto();
+              }
+          });
+          
+          // Initialize counters for stats sections if they exist
+          document.querySelectorAll('[data-counter]').forEach(counter=>{
+              const target=parseInt(counter.getAttribute('data-counter')||'0',10);
+              const duration=1500; // Animation duration in ms
+              const step=Math.ceil(target/50); // How much to increment per step
+              let current=0;
+              
+              const updateCounter=()=>{
+                  current+=step;
+                  if(current>target)current=target;
+                  
+                  counter.textContent=current.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');
+                  
+                  if(current<target){
+                      requestAnimationFrame(updateCounter);
+                  }
+              };
+              
+              // Start counting when element is in view
+              const observer=new IntersectionObserver(entries=>{
+                  entries.forEach(entry=>{
+                      if(entry.isIntersecting){
+                          updateCounter();
+                          observer.unobserve(entry.target);
+                      }
+                  });
+              },{threshold:0.5});
+              
+              observer.observe(counter);
+          });
+      });
+  </script>
 </body>
 </html>

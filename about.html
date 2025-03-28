@@ -1,289 +1,391 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Cyberhunt - About Cyberhunt">
-      <title>Cyberhunt - About Cyberhunt</title>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <style>
-        
-        #mobile-menu.hidden {
-            display: none;
-        }
-    
-      </style>
-    </head>
-    <body>
-      <nav class="bg-black text-white sticky top-0 z-50" data-animate="fade-down">
-    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold tracking-tight">
-            <span class="text-primary">Cyber</span>Hunt
-        </a>
-
-        <div class="hidden md:flex items-center space-x-6">
-            <a href="/" class="hover:text-gray-300 transition-colors duration-200">Home</a>
-            <a href="/services" class="hover:text-gray-300 transition-colors duration-200">Services</a>
-            <a href="/portfolio" class="hover:text-gray-300 transition-colors duration-200">Portfolio</a>
-            <a href="/about" class="hover:text-gray-300 transition-colors duration-200">About Us</a>
-            <a href="/contact" class="hover:text-gray-300 transition-colors duration-200">Contact</a>
-        </div>
-
-        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 py-4">
-        <div class="container mx-auto px-4 flex flex-col space-y-3">
-            <a href="/" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Home</a>
-            <a href="/services" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Services</a>
-            <a href="/portfolio" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Portfolio</a>
-            <a href="/about" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
-            <a href="/contact" class="block hover:bg-gray-800 py-2 px-4 rounded-md transition-colors duration-200">Contact</a>
-        </div>
-    </div>
-
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-</nav>
-      <header class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div class="container mx-auto px-4 py-12">
-          <h1 class="text-3xl font-bold">Cyberhunt - About Cyberhunt</h1>
-        </div>
-      </header>
-      <main class="container mx-auto px-4 py-8">
-        <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Cyberhunt - Advertising Agency</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #111827 0%, #374151 100%);
-        }
-        .hover-underline:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About - test - Professional website">
+  <meta name="generator" content="Website Generator">
+  <meta name="theme-color" content="hsl(340, 66%, 40%)">
+  <title>About - test</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap' rel='stylesheet'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+      /* Fitness Style - Energetic layout with bold accents */
+      body{font-family:'Open Sans', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+      h1,h2,h3,h4,h5,h6{font-family:'Raleway', sans-serif}
+      section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+      header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:500px;display:flex;align-items:center}
+      [data-animate]{opacity:0;transform:translateY(15px);transition:opacity .5s ease-out,transform .5s ease-out}[data-animate].visible{opacity:1;transform:translateY(0)}
+      .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(0,0,0,.15);transition:all .3s ease;width:100%}
+      ::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:#f0f0f0}::-webkit-scrollbar-thumb{background:hsl(340, 66%, 40%);border-radius:5px}::-webkit-scrollbar-thumb:hover{background:hsl(340, 66%, 50%)}
+      body::before{content:'';position:fixed;top:0;left:0;right:0;height:6px;background:hsl(340, 66%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+      @media print{[data-animate]{opacity:1;transform:none}}
+  </style>
+  
+  <script>
+      tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(340, 66%, 95%)","100":"hsl(340, 66%, 90%)","200":"hsl(340, 66%, 80%)","300":"hsl(340, 66%, 70%)","400":"hsl(340, 66%, 60%)","500":"hsl(340, 66%, 50%)","600":"hsl(340, 66%, 40%)","700":"hsl(340, 66%, 30%)","800":"hsl(340, 66%, 20%)","900":"hsl(340, 66%, 10%)"}},fontFamily:{sans:[''Open Sans'','system-ui','sans-serif'],heading:[''Raleway'','sans-serif']}}}}
+  </script>
 </head>
-<body class="bg-gray-100">
-
-    <!-- Header -->
-    <header class="gradient-bg text-white py-6 md:py-8 lg:py-12" style="background-image: url(/images/gad0bd8f704306afae8270e97285326d7dd7c4f9744f7d4b893549e6074a7b5f14b9828b5b637214e127348c53d10985e8c0fad66dbd4bf5701e2df68e69abc55_640.jpg); background-size: cover; background-position: center;">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl md:text-3xl font-bold hover:text-gray-200">Cyberhunt</a>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="/" class="hover:text-gray-200 hover-underline">Home</a>
-                    <a href="/about" class="hover:text-gray-200 hover-underline">About</a>
-                    <a href="/services" class="hover:text-gray-200 hover-underline">Services</a>
-                    <a href="/portfolio" class="hover:text-gray-200 hover-underline">Portfolio</a>
-                    <a href="/contact" class="hover:text-gray-200 hover-underline">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="text-center mt-8 md:mt-12">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4" data-animate="fade-in-down">About Cyberhunt</h1>
-                <p class="text-lg md:text-xl text-gray-300" data-animate="fade-in-up">Crafting Digital Experiences That Drive Results.</p>
-            </div>
+<body class="antialiased text-gray-800">
+  <nav class="bg-white py-4 px-6 flex items-center justify-between shadow-sm w-full">
+    <div class="flex items-center">
+      <a href="#" class="text-xl font-bold text-primary-600">About - test</a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+      <a href="#services" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+      <a href="#contact" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+    </div>
+    <div class="md:hidden">
+      <button id="mobile-menu-toggle" class="text-gray-700" aria-expanded="false" aria-controls="mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 pt-20 px-6">
+      <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="flex flex-col space-y-4">
+        <a href="#" class="text-xl text-gray-700 hover:text-primary-600 transition-colors py-2">Home</a>
+        <a href="#about" class="text-xl text-gray-700 hover:text-primary-600 transition-colors py-2">About</a>
+        <a href="#services" class="text-xl text-gray-700 hover:text-primary-600 transition-colors py-2">Services</a>
+        <a href="#contact" class="text-xl text-gray-700 hover:text-primary-600 transition-colors py-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+      
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-bold text-xl mb-4">About - test</h3>
+          <p class="text-gray-300 mb-4">Providing quality services since 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto py-12 px-4">
-
-        <!-- Company History -->
-        <section class="mb-12" data-animate="fade-in">
-            <h2 class="text-3xl font-semibold mb-6 text-gray-800">Our History</h2>
-            <p class="text-gray-700 leading-7 mb-4">
-                Cyberhunt was founded in 2010 by a group of passionate digital marketing experts who saw a need for more innovative and results-driven advertising solutions. Starting as a small team of five, we quickly grew into a full-service agency, serving clients across various industries.
-            </p>
-            <p class="text-gray-700 leading-7 mb-4">
-                Over the years, we have adapted to the ever-changing digital landscape, staying ahead of the curve with cutting-edge technologies and strategies. Our commitment to excellence and client satisfaction has allowed us to build long-lasting relationships and achieve remarkable success for our partners.
-            </p>
-            <p class="text-gray-700 leading-7">
-                Today, Cyberhunt is recognized as a leading advertising agency, known for its creativity, expertise, and dedication to delivering exceptional results.
-            </p>
-        </section>
-
-        <!-- Mission Statement -->
-        <section class="mb-12 bg-white shadow-md rounded-lg p-8" data-animate="fade-in">
-            <h2 class="text-3xl font-semibold mb-6 text-gray-800">Our Mission</h2>
-            <p class="text-gray-700 leading-7 italic">
-                To empower businesses with innovative advertising solutions that drive growth, build brand awareness, and create lasting connections with their target audience. We are committed to delivering exceptional results through creativity, expertise, and a relentless focus on client success.
-            </p>
-        </section>
-
-        <!-- Values -->
-        <section class="mb-12" data-animate="fade-in">
-            <h2 class="text-3xl font-semibold mb-6 text-gray-800">Our Core Values</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Innovation</h3>
-                    <p class="text-gray-700 leading-6">
-                        We embrace new ideas and technologies to create cutting-edge advertising solutions.
-                    </p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Integrity</h3>
-                    <p class="text-gray-700 leading-6">
-                        We operate with honesty, transparency, and ethical practices in all our interactions.
-                    </p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Collaboration</h3>
-                    <p class="text-gray-700 leading-6">
-                        We foster a collaborative environment where teamwork and open communication thrive.
-                    </p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Excellence</h3>
-                    <p class="text-gray-700 leading-6">
-                        We strive for excellence in everything we do, delivering high-quality work and exceeding expectations.
-                    </p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Client Focus</h3>
-                    <p class="text-gray-700 leading-6">
-                        We prioritize our clients' needs and goals, building strong partnerships based on trust and mutual success.
-                    </p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Results-Driven</h3>
-                    <p class="text-gray-700 leading-6">
-                        We are committed to delivering measurable results and maximizing the return on investment for our clients.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Information -->
-        <section class="mb-12" data-animate="fade-in">
-            <h2 class="text-3xl font-semibold mb-6 text-gray-800">Meet Our Team</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="/images/gf27305e031d597711abd650575f2f7851e929b07f6c797d110ef98a29a299502e593626382be217d5e6a223725ecf7b0_640.jpg" alt="John Doe" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">John Doe</h3>
-                    <p class="text-gray-700 leading-6">CEO & Founder</p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="/images/gce3d96937817d65092c6174840e6ed9b6f36d78edeece7f50d4b83424897a7e3976cf634f1781b9933c41ae9139e115c14bf42dd0c3fafcf0e8da691f78b8d22_640.jpg" alt="Jane Smith" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Jane Smith</h3>
-                    <p class="text-gray-700 leading-6">Chief Marketing Officer</p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="/images/g36a996e8b958217fc240062834194e21f9e9bbb64169756e1e0d81e711263c64456e3807cba629611974072f081deb869c36df0e5a684d8e11dc2aae4d54840d_640.jpg" alt="David Lee" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">David Lee</h3>
-                    <p class="text-gray-700 leading-6">Creative Director</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Achievements -->
-        <section data-animate="fade-in">
-            <h2 class="text-3xl font-semibold mb-6 text-gray-800">Our Achievements</h2>
-            <ul class="list-disc list-inside text-gray-700 leading-7">
-                <li>Awarded "Best Advertising Agency" by the Digital Marketing Association in 2022.</li>
-                <li>Successfully launched over 500 marketing campaigns for clients worldwide.</li>
-                <li>Increased brand awareness by an average of 40% for our clients.</li>
-                <li>Generated over $100 million in revenue for our clients through targeted advertising.</li>
-                <li>Featured in Forbes, The Wall Street Journal, and other leading publications.</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <div>
-                <h4 class="text-xl font-semibold mb-4">About Cyberhunt</h4>
-                <p class="text-gray-300">Cyberhunt is a leading advertising agency specializing in innovative digital marketing solutions. We help businesses grow and connect with their target audience.</p>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
-                <ul class="text-gray-300 space-y-2">
-                    <li><a href="/" class="hover:text-white hover-underline">Home</a></li>
-                    <li><a href="/about" class="hover:text-white hover-underline">About</a></li>
-                    <li><a href="/services" class="hover:text-white hover-underline">Services</a></li>
-                    <li><a href="/portfolio" class="hover:text-white hover-underline">Portfolio</a></li>
-                    <li><a href="/contact" class="hover:text-white hover-underline">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Services</h4>
-                <ul class="text-gray-300 space-y-2">
-                    <li><a href="#" class="hover:text-white hover-underline">Digital Marketing</a></li>
-                    <li><a href="#" class="hover:text-white hover-underline">SEO Optimization</a></li>
-                    <li><a href="#" class="hover:text-white hover-underline">Social Media Management</a></li>
-                    <li><a href="#" class="hover:text-white hover-underline">Content Creation</a></li>
-                    <li><a href="#" class="hover:text-white hover-underline">PPC Advertising</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
-                <p class="text-gray-300">123 Main Street, Anytown, USA</p>
-                <p class="text-gray-300">Email: info@cyberhunt.com</p>
-                <p class="text-gray-300">Phone: (555) 123-4567</p>
-            </div>
+        <div>
+          <h3 class="font-bold text-xl mb-4">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Service 1</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Service 2</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Service 3</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Service 4</a></li>
+          </ul>
         </div>
-        <div class="text-center mt-8">
-            <p class="text-gray-400">© 2024 Cyberhunt. All rights reserved.</p>
+        <div>
+          <h3 class="font-bold text-xl mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+          </ul>
         </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const nav = document.querySelector('nav');
-
-            mobileMenuButton.addEventListener('click', function () {
-                nav.classList.toggle('hidden');
-                nav.classList.toggle('flex');
-            });
-
-            // Animation on scroll
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fadeIn'); // Add your animation class
-                        observer.unobserve(entry.target); // Stop observing after animating once
-                    }
-                });
-            }, {
-                threshold: 0.1 // Adjust threshold as needed
-            });
-
-            document.querySelectorAll('[data-animate="fade-in"]').forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
+        <div>
+          <h3 class="font-bold text-xl mb-4">Contact Us</h3>
+          <address class="not-italic text-gray-300 space-y-2">
+            <p>123 Business Street</p>
+            <p>City, State 12345</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@about-test.com</p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 About - test. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  </main>
+  
+  <script>
+      document.addEventListener('DOMContentLoaded',function(){
+          // Animation system
+          const observer=new IntersectionObserver(entries=>{
+              entries.forEach((entry,i)=>{
+                  if(entry.isIntersecting){
+                      setTimeout(()=>{
+                          entry.target.classList.add('visible');
+                          // Handle staggered children if using that animation style
+                          if(entry.target.getAttribute('data-animate')==='stagger'){
+                              Array.from(entry.target.children).forEach((child,childIndex)=>{
+                                  child.style.setProperty('--child-index',childIndex);
+                              });
+                          }
+                      },i*100);
+                      observer.unobserve(entry.target);
+                  }
+              });
+          },{threshold:0.15,rootMargin:'0px 0px -100px 0px'});
+          
+          document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+          
+          // Fixed navigation
+          const nav=document.querySelector('nav');
+          if(nav){
+              const handleScroll=()=>{
+                  nav.classList[window.scrollY>100?'add':'remove']('nav-fixed');
+              };
+              window.addEventListener('scroll',handleScroll,{passive:true});
+              handleScroll();
+          }
+          
+          // Smooth scroll
+          document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+              anchor.addEventListener('click',function(e){
+                  e.preventDefault();
+                  const targetId=this.getAttribute('href');
+                  if(targetId==='#')return;
+                  const target=document.querySelector(targetId);
+                  if(target){
+                      const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-(nav?nav.offsetHeight:0)-20;
+                      window.scrollTo({top:targetPosition,behavior:'smooth'});
+                  }
+              });
+          });
+          
+          // Scroll progress indicator
+          const updateScrollProgress = () => {
+              const height=Math.max(
+                  document.body.scrollHeight,
+                  document.body.offsetHeight,
+                  document.documentElement.clientHeight,
+                  document.documentElement.scrollHeight,
+                  document.documentElement.offsetHeight
+              )-window.innerHeight;
+              
+              document.documentElement.style.setProperty('--scroll-progress',(window.scrollY/height*100)+'%');
+          };
+          
+          window.addEventListener('scroll', updateScrollProgress, {passive:true});
+          window.addEventListener('resize', updateScrollProgress, {passive:true});
+          updateScrollProgress();
+          
+          // Mobile menu with enhanced accessibility
+          const menuToggle=document.getElementById('mobile-menu-toggle');
+          const mobileMenu=document.getElementById('mobile-menu');
+          if(menuToggle&&mobileMenu){
+              menuToggle.addEventListener('click',()=>{
+                  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                  menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                  mobileMenu.classList.toggle('hidden');
+                  document.body.classList.toggle('overflow-hidden');
+              });
+              
+              // Close on click outside
+              document.addEventListener('click',e=>{
+                  if(mobileMenu&&!mobileMenu.classList.contains('hidden')&&
+                      menuToggle&&!menuToggle.contains(e.target)&&!mobileMenu.contains(e.target)){
+                      mobileMenu.classList.add('hidden');
+                      document.body.classList.remove('overflow-hidden');
+                      menuToggle.setAttribute('aria-expanded', 'false');
+                  }
+              });
+              
+              // Close on escape key
+              document.addEventListener('keydown', e => {
+                  if(e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                      mobileMenu.classList.add('hidden');
+                      document.body.classList.remove('overflow-hidden');
+                      menuToggle.setAttribute('aria-expanded', 'false');
+                  }
+              });
+          }
+          
+          // Accordions
+          document.querySelectorAll('[data-accordion-target]').forEach(btn=>{
+              btn.addEventListener('click',()=>{
+                  const target=document.querySelector(btn.getAttribute('data-accordion-target'));
+                  if(target){
+                      const isExpanded=btn.getAttribute('aria-expanded')==='true';
+                      target.classList.toggle('hidden');
+                      btn.setAttribute('aria-expanded',isExpanded?'false':'true');
+                      const icon=btn.querySelector('.accordion-icon');
+                      if(icon)icon.classList.toggle('rotate-180');
+                  }
+              });
+          });
+          
+          // Form validation
+          document.querySelectorAll('form').forEach(form=>{
+              form.addEventListener('submit',function(e){
+                  let valid=true;
+                  const requiredFields=form.querySelectorAll('[required]');
+                  
+                  requiredFields.forEach(field=>{
+                      if(!field.value.trim()){
+                          valid=false;
+                          field.classList.add('border-red-500');
+                          
+                          // Add error message if not already present
+                          let errorMsg=field.parentNode.querySelector('.error-message');
+                          if(!errorMsg){
+                              errorMsg=document.createElement('p');
+                              errorMsg.className='text-red-500 text-sm mt-1 error-message';
+                              errorMsg.textContent='This field is required';
+                              field.parentNode.appendChild(errorMsg);
+                          }
+                      }else{
+                          field.classList.remove('border-red-500');
+                          const errorMsg=field.parentNode.querySelector('.error-message');
+                          if(errorMsg)errorMsg.remove();
+                      }
+                  });
+                  
+                  if(!valid){
+                      e.preventDefault();
+                  }
+              });
+          });
+          
+          // Tabs functionality if present
+          document.querySelectorAll('[data-tabs]').forEach(tabGroup=>{
+              const tabs=tabGroup.querySelectorAll('[data-tab]');
+              const tabContents=document.querySelectorAll('[data-tab-content]');
+              
+              tabs.forEach(tab=>{
+                  tab.addEventListener('click',()=>{
+                      const target=tab.getAttribute('data-tab');
+                      
+                      // Update active tab state
+                      tabs.forEach(t=>{
+                          t.classList.remove('active-tab','text-primary-600','border-primary-600');
+                          t.setAttribute('aria-selected', 'false');
+                      });
+                      tab.classList.add('active-tab','text-primary-600','border-primary-600');
+                      tab.setAttribute('aria-selected', 'true');
+                      
+                      // Show correct content
+                      tabContents.forEach(content=>{
+                          if(content.getAttribute('data-tab-content')===target){
+                              content.classList.remove('hidden');
+                          }else{
+                              content.classList.add('hidden');
+                          }
+                      });
+                  });
+              });
+          });
+          
+          // Carousels
+          document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+              const slides=carousel.querySelectorAll('[data-slide]');
+              const prevBtn=carousel.querySelector('[data-carousel-prev]');
+              const nextBtn=carousel.querySelector('[data-carousel-next]');
+              
+              if(slides.length>0&&prevBtn&&nextBtn){
+                  let current=0,interval=null;
+                  
+                  slides[0].classList.remove('hidden');
+                  
+                  const updateIndicators=()=>{
+                      carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                          ind.classList[i===current?'add':'remove']('bg-primary-600');
+                          ind.classList[i!==current?'add':'remove']('bg-gray-300');
+                      });
+                  };
+                  
+                  const showSlide=idx=>{
+                      slides.forEach(s=>s.classList.add('hidden'));
+                      slides[idx].classList.remove('hidden');
+                      updateIndicators();
+                  };
+                  
+                  nextBtn.addEventListener('click',()=>{
+                      current=(current+1)%slides.length;
+                      showSlide(current);
+                  });
+                  
+                  prevBtn.addEventListener('click',()=>{
+                      current=(current-1+slides.length)%slides.length;
+                      showSlide(current);
+                  });
+                  
+                  updateIndicators();
+                  
+                  const startAuto=()=>{
+                      if(carousel.hasAttribute('data-auto')&&!interval){
+                          interval=setInterval(()=>{
+                              current=(current+1)%slides.length;
+                              showSlide(current);
+                          },5000);
+                      }
+                  };
+                  
+                  carousel.addEventListener('mouseenter',()=>{
+                      if(interval){clearInterval(interval);interval=null;}
+                  });
+                  
+                  carousel.addEventListener('mouseleave',startAuto);
+                  
+                  carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                      ind.addEventListener('click',()=>{
+                          current=i;
+                          showSlide(current);
+                      });
+                  });
+                  
+                  startAuto();
+              }
+          });
+          
+          // Initialize counters for stats sections if they exist
+          document.querySelectorAll('[data-counter]').forEach(counter=>{
+              const target=parseInt(counter.getAttribute('data-counter')||'0',10);
+              const duration=1500; // Animation duration in ms
+              const step=Math.ceil(target/50); // How much to increment per step
+              let current=0;
+              
+              const updateCounter=()=>{
+                  current+=step;
+                  if(current>target)current=target;
+                  
+                  counter.textContent=current.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');
+                  
+                  if(current<target){
+                      requestAnimationFrame(updateCounter);
+                  }
+              };
+              
+              // Start counting when element is in view
+              const observer=new IntersectionObserver(entries=>{
+                  entries.forEach(entry=>{
+                      if(entry.isIntersecting){
+                          updateCounter();
+                          observer.unobserve(entry.target);
+                      }
+                  });
+              },{threshold:0.5});
+              
+              observer.observe(counter);
+          });
+      });
+  </script>
 </body>
 </html>
-      </main>
-      
-    </body>
-    </html>
